@@ -1,0 +1,880 @@
+<!DOCTYPE html>
+
+<html lang="es">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1, viewport-fit=cover" name="viewport"/>
+<meta content="#00A79F" name="theme-color"/>
+<meta content="Landing interactiva de GuauFresh: producto, modo de uso, presentaciones, beneficio, registro de clientes y pago por QR." name="description"/>
+<title>GuauFresh · Baño en seco y cuidado entre baños</title>
+<link rel="icon" type="image/png" sizes="32x32" href="assets/embedded-4bacfebc23.png"/>
+<link rel="icon" type="image/png" sizes="64x64" href="assets/embedded-7b8d365f85.png"/>
+<link rel="apple-touch-icon" sizes="180x180" href="assets/embedded-58c26af934.png"/>
+<link rel="icon" type="image/png" sizes="192x192" href="assets/embedded-9c70170882.png"/>
+<style>
+    :root{
+      --teal:#00A79F;--teal2:#35BB9B;--mint:#62CE92;--green:#90DE85;--lime:#C3ED79;--yellow:#F9F871;--grey:#666666;
+      --ink:#163f3d;--cream:#fbfaf4;--white:#fff;--line:rgba(0,167,159,.18);--soft:#edf8f4;--warn:#fff8dc;
+      --shadow:0 20px 60px rgba(15,80,75,.13);--shadow2:0 10px 30px rgba(15,80,75,.09);
+      --display:"MADE Dillan","Cooper Black","URW Bookman",Georgia,serif;
+      --body:"Galano Grotesque","Avenir Next","Segoe UI",Arial,sans-serif;
+    }
+    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--cream);color:var(--grey);font-family:var(--body);line-height:1.55;overflow-x:hidden}img{display:block;max-width:100%}button,input,select,textarea{font:inherit}button{cursor:pointer}a{color:inherit}.wrap{width:min(1180px,calc(100% - 32px));margin:auto}.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+    .progress{position:fixed;z-index:1000;top:0;left:0;height:4px;width:0;background:var(--teal);transition:.1s}
+    header{position:fixed;z-index:100;top:4px;left:0;right:0;padding:12px 0;transition:.25s}header.scrolled{background:rgba(251,250,244,.92);backdrop-filter:blur(16px);box-shadow:0 8px 30px rgba(15,80,75,.09)}.head{display:flex;align-items:center;justify-content:space-between;gap:18px}.brand{display:flex;align-items:center;background:rgba(255,255,255,.93);border:1px solid var(--line);padding:8px 13px;border-radius:18px;box-shadow:var(--shadow2)}.brand img{width:146px;height:auto}.nav{display:flex;gap:22px;align-items:center}.nav a{text-decoration:none;font-size:14px;font-weight:800;color:#315d59}.actions{display:flex;gap:8px;align-items:center}.btn,.icon{border:0;border-radius:16px;display:inline-flex;align-items:center;justify-content:center;gap:9px;font-weight:850}.btn{padding:13px 18px}.btn-primary{background:var(--teal);color:#fff;box-shadow:0 13px 28px rgba(0,167,159,.25)}.btn-secondary{background:#fff;color:var(--ink);border:1px solid var(--line)}.btn-soft{background:var(--soft);color:var(--ink)}.icon{width:44px;height:44px;background:#fff;border:1px solid var(--line);color:var(--ink)}.icon svg,.btn svg{width:19px;height:19px}.menu{display:none}
+    .hero{position:relative;min-height:880px;background:#102d2a;overflow:hidden}.hero-bg{position:absolute;inset:0}.hero .wrap{position:relative;min-height:880px;display:grid;grid-template-columns:1.12fr .88fr;align-items:end;gap:50px;padding:160px 0 74px}.eyebrow{display:inline-flex;align-items:center;gap:9px;color:var(--lime);font-weight:900;text-transform:uppercase;letter-spacing:.12em;font-size:12px}.eyebrow i{width:34px;height:2px;background:var(--lime)}h1,h2,h3,p{margin-top:0}.hero h1{font-family:var(--display);font-size:clamp(52px,7vw,92px);line-height:.96;color:#fff;margin:18px 0 22px;max-width:760px}.hero h1 em{color:var(--lime);font-style:normal}.hero-lead{color:rgba(255,255,255,.82);font-size:19px;max-width:650px}.hero-ctas{display:flex;flex-wrap:wrap;gap:11px;margin:30px 0}.hero .btn-secondary{background:rgba(255,255,255,.12);color:#fff;border-color:rgba(255,255,255,.25);backdrop-filter:blur(8px)}.trust{display:flex;flex-wrap:wrap;gap:12px}.pill{display:inline-flex;align-items:center;gap:7px;padding:9px 12px;border-radius:999px;background:rgba(255,255,255,.11);color:#fff;font-size:13px;border:1px solid rgba(255,255,255,.16)}.pill b{color:var(--lime)}
+    .hero-product{align-self:end;background:rgba(255,255,255,.95);border-radius:36px 36px 10px 36px;padding:18px;box-shadow:var(--shadow);transform:translateY(34px)}.product-photo{border-radius:26px;overflow:hidden;aspect-ratio:1/1;background:#dfeee5}.product-photo img{width:100%;height:100%;object-fit:cover}.hero-product-meta{padding:18px 10px 6px}.hero-product-meta strong{display:block;font-size:22px;color:var(--ink)}.hero-product-meta p{margin:5px 0 0}.price-row{display:flex;justify-content:space-between;gap:12px;margin-top:14px}.price-tag{flex:1;background:var(--soft);border:1px solid var(--line);padding:11px;border-radius:14px;color:var(--ink);font-weight:900;text-align:center}.price-tag small{display:block;color:var(--grey);font-weight:700}
+    .section{padding:100px 0}.section.alt{background:#fff}.section-head{display:grid;grid-template-columns:1fr .55fr;gap:35px;align-items:end;margin-bottom:45px}.kicker{text-transform:uppercase;letter-spacing:.13em;color:var(--teal);font-weight:900;font-size:12px}.title{font-family:var(--display);color:var(--ink);font-size:clamp(38px,5vw,64px);line-height:1.05;margin:10px 0 14px}.title em{font-style:normal;color:var(--teal)}.intro{font-size:18px;max-width:760px}.side-note{padding:20px;border-left:3px solid var(--mint);background:var(--soft);border-radius:0 18px 18px 0;font-size:14px}
+    .about-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:28px}.story-card{background:var(--ink);color:#fff;border-radius:32px;padding:42px;position:relative;overflow:hidden}.story-card:after{content:"";position:absolute;width:260px;height:260px;border-radius:50%;background:var(--teal);right:-100px;bottom:-130px;opacity:.25}.story-card h3{font-family:var(--display);font-size:36px;line-height:1.05}.story-card p{color:rgba(255,255,255,.8)}.facts{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}.fact{background:#fff;border:1px solid var(--line);border-radius:24px;padding:24px;box-shadow:var(--shadow2)}.fact .num{font-family:var(--display);font-size:42px;color:var(--teal)}.fact strong{display:block;color:var(--ink);margin:4px 0 5px}.fact p{font-size:14px;margin:0}
+    .scenario-shell{display:grid;grid-template-columns:.8fr 1.2fr;gap:24px}.scenario-image{min-height:520px;border-radius:34px;overflow:hidden;position:relative}.scenario-image img{width:100%;height:100%;object-fit:cover}.scenario-image .caption{position:absolute;left:20px;right:20px;bottom:20px;background:rgba(16,43,41,.86);color:#fff;border-radius:18px;padding:16px;backdrop-filter:blur(8px)}.scenario-panel{background:#fff;border:1px solid var(--line);border-radius:34px;padding:28px;box-shadow:var(--shadow2)}.scenario-tabs{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin-bottom:22px}.scenario-tab{border:1px solid var(--line);background:var(--cream);padding:14px;border-radius:16px;color:var(--ink);font-weight:850}.scenario-tab.active{background:var(--teal);color:#fff}.result{background:var(--soft);border-radius:22px;padding:24px;min-height:250px}.result .badge{display:inline-block;padding:7px 10px;border-radius:999px;background:var(--lime);color:var(--ink);font-weight:900;font-size:12px}.result h3{color:var(--ink);font-size:28px;margin:14px 0 8px}.checklist{display:grid;gap:9px;margin:16px 0 0;padding:0;list-style:none}.checklist li{display:flex;gap:10px;align-items:flex-start}.checklist li:before{content:"✓";display:grid;place-items:center;flex:0 0 23px;height:23px;border-radius:50%;background:var(--teal);color:#fff;font-weight:900}
+    .product-grid{display:grid;grid-template-columns:1fr 1fr;gap:30px;align-items:stretch}.product-showcase{background:var(--soft);border-radius:34px;padding:28px;display:grid;grid-template-columns:.85fr 1.15fr;gap:25px;align-items:center}.product-showcase img{border-radius:24px;box-shadow:var(--shadow2)}.product-copy h3{font-family:var(--display);font-size:40px;color:var(--ink);margin-bottom:12px}.product-copy .claims{display:flex;flex-wrap:wrap;gap:8px;margin:18px 0}.claim{background:#fff;border:1px solid var(--line);border-radius:999px;padding:8px 11px;font-size:13px;font-weight:850;color:var(--ink)}.tech-card{background:#fff;border:1px solid var(--line);border-radius:34px;padding:30px;box-shadow:var(--shadow2)}.tech-card h3{color:var(--ink);font-size:28px}.ingredients{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}.ingredient{border:1px solid var(--line);border-radius:16px;padding:14px}.ingredient strong{display:block;color:var(--ink)}.ingredient small{color:var(--grey)}details{margin-top:18px;border-top:1px solid var(--line);padding-top:15px}summary{cursor:pointer;color:var(--teal);font-weight:900}.composition{font-size:13px;background:var(--cream);padding:15px;border-radius:14px;margin-top:10px}
+    .steps{display:grid;grid-template-columns:repeat(4,1fr);gap:15px}.step{background:#fff;border:1px solid var(--line);border-radius:24px;padding:24px;position:relative}.step .n{font-family:var(--display);font-size:52px;color:var(--mint);line-height:1}.step h3{color:var(--ink);font-size:20px;margin:12px 0 8px}.step p{font-size:14px;margin:0}.precaution{margin-top:20px;background:var(--warn);border:1px solid rgba(205,168,0,.25);border-radius:18px;padding:16px;font-size:14px}
+    .pricing{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}.price-card{background:#fff;border:1px solid var(--line);border-radius:30px;padding:28px;display:grid;grid-template-columns:1fr auto;gap:15px;align-items:center;box-shadow:var(--shadow2)}.price-card.featured{border:2px solid var(--teal)}.price-card h3{font-family:var(--display);color:var(--ink);font-size:36px;margin:0}.price-card .amount{font-size:36px;font-weight:950;color:var(--teal);white-space:nowrap}.price-card p{margin:5px 0}.price-card .note{font-size:13px;color:var(--grey)}
+    .event{background:var(--ink);color:#fff;position:relative;overflow:hidden}.event:before{content:"";position:absolute;inset:auto -180px -240px auto;width:520px;height:520px;border-radius:50%;background:var(--teal);opacity:.18}.event-grid{display:grid;grid-template-columns:1fr .9fr;gap:38px;align-items:center}.event .title{color:#fff}.event .intro{color:rgba(255,255,255,.78)}.discount{display:inline-flex;align-items:center;gap:14px;background:var(--yellow);color:var(--ink);border-radius:22px;padding:14px 18px;margin:18px 0;font-weight:950}.discount b{font-family:var(--display);font-size:40px}.event-card{background:#fff;color:var(--grey);border-radius:32px;padding:30px;position:relative;z-index:2}.event-card h3{color:var(--ink);font-size:28px}.event-card ol{padding-left:20px}.event-card li{margin:10px 0}.coupon{display:none;margin-top:18px;background:var(--soft);border:2px dashed var(--teal);padding:20px;border-radius:18px;text-align:center}.coupon.show{display:block}.coupon strong{font-family:var(--display);font-size:34px;color:var(--teal)}
+    .passport-grid{display:grid;grid-template-columns:.85fr 1.15fr;gap:28px;align-items:start}.passport-form{background:#fff;border:1px solid var(--line);border-radius:30px;padding:28px;box-shadow:var(--shadow2)}.field{display:grid;gap:7px;margin-bottom:14px}.field label{font-weight:850;color:var(--ink)}.field input,.field select,.field textarea{width:100%;border:1px solid var(--line);background:var(--cream);border-radius:14px;padding:13px;color:var(--ink)}.passport-preview{background:var(--ink);border-radius:34px;padding:22px}.passport-card{aspect-ratio:4/5;border-radius:25px;overflow:hidden;position:relative;background:var(--teal);color:#fff}.passport-photo{position:absolute;inset:0 0 42% 0;background-image:url('assets/embedded-50446eb6ba.webp');background-size:cover;background-position:center}.passport-card:after{content:"";position:absolute;inset:20% 0 38% 0;background:linear-gradient(transparent,rgba(16,43,41,.82))}.passport-info{position:absolute;z-index:2;left:28px;right:28px;bottom:26px}.passport-logo{width:148px;filter:brightness(0) invert(1);margin-bottom:14px}.passport-name{font-family:var(--display);font-size:44px;line-height:1}.passport-trait{color:var(--lime);font-weight:900;font-size:18px;margin-top:7px}.passport-mini{font-size:13px;opacity:.82;margin-top:10px}.passport-actions{display:flex;gap:10px;margin-top:14px}.passport-actions .btn{flex:1}
+    .faq{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}.faq details{margin:0;background:#fff;border:1px solid var(--line);border-radius:18px;padding:18px}.faq summary{color:var(--ink)}.faq p{font-size:14px;margin:12px 0 0}
+    .contact{padding:75px 0;background:var(--teal);color:#fff}.contact-grid{display:grid;grid-template-columns:1fr auto;gap:30px;align-items:center}.contact h2{font-family:var(--display);font-size:clamp(40px,5vw,66px);line-height:1;margin-bottom:12px}.contact p{color:rgba(255,255,255,.82);max-width:700px}.contact-actions{display:grid;gap:10px}.contact .btn-secondary{min-width:240px}
+    footer{background:#0e2e2b;color:rgba(255,255,255,.7);padding:38px 0 95px}.foot{display:grid;grid-template-columns:1fr 1fr;gap:25px}.foot img{width:150px;filter:brightness(0) invert(1);opacity:.95}.legal{font-size:12px;text-align:right}.mobile-bar{display:none;position:fixed;z-index:90;left:10px;right:10px;bottom:10px;background:rgba(16,43,41,.96);backdrop-filter:blur(12px);padding:8px;border-radius:20px;box-shadow:var(--shadow);grid-template-columns:repeat(3,1fr);gap:6px}.mobile-bar a,.mobile-bar button{border:0;background:transparent;color:#fff;text-decoration:none;display:grid;place-items:center;gap:3px;font-size:11px;font-weight:800;padding:7px}.mobile-bar svg{width:20px;height:20px}
+    .modal{position:fixed;z-index:1000;inset:0;background:rgba(10,31,29,.72);display:none;place-items:center;padding:18px}.modal.show{display:grid}.modal-card{width:min(460px,100%);background:#fff;border-radius:28px;padding:26px;text-align:center;box-shadow:var(--shadow)}.modal-card img{width:250px;margin:16px auto;border:8px solid var(--soft);border-radius:18px}.toast{position:fixed;z-index:1100;left:50%;bottom:25px;transform:translate(-50%,120px);background:var(--ink);color:#fff;padding:12px 16px;border-radius:14px;transition:.3s;box-shadow:var(--shadow)}.toast.show{transform:translate(-50%,0)}
+    @media(max-width:900px){.nav{display:none}.menu{display:grid}.hero .wrap{grid-template-columns:1fr;padding-top:135px}.hero-product{max-width:520px}.section-head,.about-grid,.scenario-shell,.product-grid,.event-grid,.passport-grid,.contact-grid{grid-template-columns:1fr}.section-head{gap:12px}.steps{grid-template-columns:repeat(2,1fr)}.product-showcase{grid-template-columns:1fr}.contact-actions{display:flex;flex-wrap:wrap}.contact .btn-secondary{min-width:0}.mobile-bar{display:grid}footer{padding-bottom:115px}}
+    @media(max-width:620px){.wrap{width:min(calc(100% - 22px),1180px)}header{padding:8px 0}.brand img{width:120px}.actions .btn{display:none}.hero{min-height:auto}.hero .wrap{min-height:820px;padding:120px 0 40px}.hero h1{font-size:51px}.hero-lead{font-size:17px}.hero-product{transform:none;border-radius:28px}.section{padding:72px 0}.title{font-size:40px}.facts,.scenario-tabs,.pricing,.faq{grid-template-columns:1fr}.steps{grid-template-columns:1fr}.product-grid{gap:18px}.price-card{grid-template-columns:1fr}.price-card .amount{font-size:32px}.passport-card{aspect-ratio:4/5}.foot{grid-template-columns:1fr}.legal{text-align:left}.contact-actions{display:grid}.contact .btn-secondary{width:100%}}
+
+
+/* ===== Sistema de clientes GuauFresh ===== */
+.gf-crm-section{background:linear-gradient(155deg,#edf9f5 0%,#fbfaf4 52%,#f7f4e9 100%);overflow:hidden}
+.gf-crm-section:before{content:"";position:absolute;width:520px;height:520px;border-radius:50%;right:-250px;top:80px;background:rgba(98,206,146,.13)}
+.gf-crm-shell{position:relative;display:grid;grid-template-columns:minmax(0,.92fr) minmax(420px,1.08fr);gap:46px;align-items:center}
+.gf-crm-copy .title{max-width:620px}.gf-crm-copy .intro{max-width:620px}
+.gf-crm-benefits{display:grid;gap:13px;margin-top:30px}.gf-crm-benefits article{display:grid;grid-template-columns:48px 1fr;gap:14px;padding:17px 18px;background:rgba(255,255,255,.74);border:1px solid rgba(0,167,159,.14);border-radius:20px;backdrop-filter:blur(12px)}
+.gf-crm-benefits article>span{width:48px;height:48px;border-radius:16px;display:grid;place-items:center;background:var(--teal);color:#fff;font-weight:900}.gf-crm-benefits strong{display:block;color:var(--ink);font-size:16px}.gf-crm-benefits p{margin:3px 0 0;font-size:13px;color:#6e7e7b}
+.gf-local-status{margin-top:18px;display:grid;grid-template-columns:11px auto 1fr;align-items:center;gap:9px;font-size:12px;color:#607572}.gf-local-status i{width:11px;height:11px;border-radius:50%;background:#e7a93b;box-shadow:0 0 0 5px rgba(231,169,59,.12)}.gf-local-status.online i{background:var(--teal);box-shadow:0 0 0 5px rgba(0,167,159,.12)}.gf-local-status b{color:var(--ink)}
+.gf-crm-card{background:#fff;border:1px solid rgba(0,167,159,.15);border-radius:32px;padding:29px;box-shadow:0 30px 80px rgba(15,80,75,.14);position:relative}
+.gf-step-head{display:flex;align-items:center;justify-content:space-between;gap:20px;margin-bottom:23px}.gf-step-head small{display:block;text-transform:uppercase;letter-spacing:.1em;font-weight:900;color:var(--teal);font-size:10px}.gf-step-head strong{font-family:var(--display);color:var(--ink);font-size:27px}.gf-step-dots{display:flex;gap:7px}.gf-step-dots i{width:26px;height:7px;border-radius:999px;background:#dbe9e6}.gf-step-dots i.active{background:var(--teal)}
+.gf-form-step{display:none}.gf-form-step.active{display:block;animation:gfFade .24s ease}.gf-fields{display:grid;grid-template-columns:1fr 1fr;gap:13px}.gf-field{display:grid;gap:7px}.gf-field.full,.gf-consent.full{grid-column:1/-1}.gf-field span{font-size:12px;font-weight:850;color:#456963}.gf-field input,.gf-field select,.gf-admin-toolbar input,.gf-admin-toolbar select,.gf-backend-config input{width:100%;border:1px solid rgba(0,167,159,.19);background:#f8fcfa;color:#294d49;border-radius:14px;padding:13px 14px;outline:none}.gf-field input:focus,.gf-field select:focus,.gf-admin-toolbar input:focus,.gf-backend-config input:focus{border-color:var(--teal);box-shadow:0 0 0 4px rgba(0,167,159,.09)}.gf-field input.invalid,.gf-field select.invalid{border-color:#c65f5f;box-shadow:0 0 0 4px rgba(198,95,95,.08)}
+.gf-consent{display:flex;gap:10px;align-items:flex-start;margin-top:3px;padding:12px 13px;border-radius:14px;background:#f3faf7;color:#55736f;font-size:11px}.gf-consent input{width:18px;height:18px;accent-color:var(--teal);flex:0 0 auto}.gf-honeypot{position:absolute;left:-9999px;opacity:0;pointer-events:none}.gf-form-actions{display:flex;justify-content:flex-end;margin-top:19px}.gf-form-actions.split{justify-content:space-between;gap:12px}.gf-back{background:#eef7f4;color:var(--ink);border:1px solid rgba(0,167,159,.14)}
+.gf-privacy-note{margin:15px 0 0;font-size:10px;color:#7c8e8a;text-align:center}.gf-privacy-note button{border:0;background:transparent;color:var(--teal);font-weight:850;text-decoration:underline}
+.gf-success{display:none;text-align:center;padding:15px 5px 2px}.gf-success.show{display:block;animation:gfFade .28s ease}.gf-success-icon{width:62px;height:62px;border-radius:50%;display:grid;place-items:center;margin:0 auto 12px;background:linear-gradient(145deg,var(--teal),var(--mint));color:#fff;font-size:30px;font-weight:900}.gf-success small{text-transform:uppercase;letter-spacing:.1em;font-weight:900;color:var(--teal)}.gf-success h3{font-size:34px;margin:8px 0}.gf-success p{color:#677b77}.gf-success code{display:inline-block;padding:7px 10px;border-radius:10px;background:#eff9f5;color:var(--teal);font-weight:900}.gf-success-actions{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:18px}
+.gf-modal{position:fixed;z-index:1000;inset:0;padding:22px;background:rgba(10,39,37,.72);backdrop-filter:blur(10px);display:none;align-items:center;justify-content:center}.gf-modal.show{display:flex}.gf-modal-card{width:min(720px,100%);max-height:calc(100vh - 44px);overflow:auto;background:#fff;border-radius:28px;padding:30px;box-shadow:0 35px 100px rgba(0,0,0,.3);position:relative}.gf-modal-close{position:absolute;right:16px;top:14px;width:42px;height:42px;border-radius:14px;border:0;background:#eef7f4;color:var(--ink);font-size:25px}.gf-privacy-card h2{font-size:39px;margin:8px 0 15px}.gf-privacy-card li{margin:8px 0}.gf-privacy-card .btn{margin-top:12px}
+.gf-admin-card{width:min(1180px,100%)}.gf-admin-head{display:flex;justify-content:space-between;gap:25px;align-items:flex-start}.gf-admin-head h2{font-size:42px;margin:6px 0}.gf-admin-head p{margin:0;color:#748581}.gf-backend-pill{padding:8px 12px;border-radius:999px;background:#fff3db;color:#8c651a;font-weight:900;font-size:12px}.gf-backend-pill.online{background:#e9f8f1;color:#28755d}
+.gf-admin-stats{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin:23px 0}.gf-admin-stats article{padding:15px;border-radius:18px;background:#f4faf7;border:1px solid var(--line)}.gf-admin-stats small{display:block;color:#6d817d}.gf-admin-stats strong{font-family:var(--display);font-size:31px;color:var(--ink)}
+.gf-backend-config{display:grid;grid-template-columns:minmax(220px,1fr) minmax(280px,1.2fr) auto auto;gap:10px;align-items:center;padding:15px;border-radius:18px;background:#f8fbfa;border:1px solid var(--line)}.gf-backend-config strong,.gf-backend-config small{display:block}.gf-backend-config small{font-size:10px;color:#7b8c88}.gf-backend-config .btn{min-height:44px;padding:10px 13px}
+.gf-admin-toolbar{display:grid;grid-template-columns:1fr 190px auto auto;gap:10px;margin:17px 0}.gf-admin-toolbar .btn{min-height:44px;padding:10px 14px}.gf-table-wrap{overflow:auto;border:1px solid var(--line);border-radius:18px}.gf-lead-table{width:100%;border-collapse:collapse;min-width:860px}.gf-lead-table th,.gf-lead-table td{text-align:left;padding:13px 14px;border-bottom:1px solid #edf3f1;font-size:12px;vertical-align:top}.gf-lead-table th{position:sticky;top:0;background:#eef8f4;color:#456963;text-transform:uppercase;letter-spacing:.06em;font-size:10px}.gf-lead-table strong{color:var(--ink);display:block}.gf-lead-table small{color:#7c8d89}.gf-sync-state{display:inline-flex;padding:4px 7px;border-radius:999px;background:#fff1d7;color:#8b6417;font-weight:800}.gf-sync-state.synced{background:#e7f8f0;color:#26745c}.gf-row-delete{border:0;background:#fff0f0;color:#a94d4d;padding:6px 9px;border-radius:9px}.gf-empty{display:none;padding:35px;text-align:center;color:#758783}.gf-empty.show{display:block}.gf-admin-foot{display:flex;justify-content:space-between;gap:20px;align-items:center;margin-top:14px;font-size:10px;color:#7b8c88}.gf-danger{border:0;background:transparent;color:#b34f4f;text-decoration:underline;font-weight:800}.gf-admin-link{border:1px solid rgba(255,255,255,.18);background:transparent;color:rgba(255,255,255,.72);border-radius:999px;padding:8px 12px;font-size:11px}
+.gf-toast{position:fixed;z-index:1200;right:18px;bottom:18px;max-width:360px;padding:13px 16px;border-radius:15px;background:#153f3b;color:#fff;box-shadow:0 18px 50px rgba(0,0,0,.24);transform:translateY(120px);opacity:0;transition:.25s}.gf-toast.show{transform:none;opacity:1}.gf-toast.error{background:#7e3535}
+@keyframes gfFade{from{opacity:0;transform:translateY(7px)}to{opacity:1;transform:none}}
+@media(max-width:900px){.gf-crm-shell{grid-template-columns:1fr}.gf-crm-card{padding:23px}.gf-admin-stats{grid-template-columns:1fr 1fr}.gf-backend-config{grid-template-columns:1fr}.gf-admin-toolbar{grid-template-columns:1fr 1fr}.gf-admin-toolbar input{grid-column:1/-1}.gf-admin-card{padding:22px}.gf-admin-head{display:block}.gf-backend-pill{display:inline-block;margin-top:10px}}
+@media(max-width:620px){.gf-fields{grid-template-columns:1fr}.gf-field.full,.gf-consent.full{grid-column:auto}.gf-crm-benefits article{grid-template-columns:42px 1fr}.gf-crm-benefits article>span{width:42px;height:42px}.gf-success-actions{grid-template-columns:1fr}.gf-admin-stats{grid-template-columns:1fr 1fr}.gf-admin-toolbar{grid-template-columns:1fr}.gf-admin-toolbar input{grid-column:auto}.gf-admin-foot{display:grid}.gf-modal{padding:10px}.gf-modal-card{padding:22px;max-height:calc(100vh - 20px)}}
+
+
+/* GuauFresh visual QA — v2 */
+html,body{width:100%;max-width:100vw;overflow-x:clip;position:relative}
+header{top:0;padding:16px 0;background:linear-gradient(180deg,rgba(7,35,33,.80),rgba(7,35,33,.26) 70%,transparent);}
+header.scrolled{background:rgba(251,250,244,.96);}
+.brand{background:transparent!important;border:0!important;box-shadow:none!important;padding:0!important;border-radius:0!important;}
+.brand img{display:block;width:190px!important;max-height:76px;object-fit:contain;filter:drop-shadow(0 5px 16px rgba(0,0,0,.22));}
+header:not(.scrolled) .nav a{color:rgba(255,255,255,.92);text-shadow:0 1px 12px rgba(0,0,0,.28)}
+header.scrolled .nav a{color:#315d59;text-shadow:none}
+header:not(.scrolled) .icon{background:rgba(255,255,255,.92)}
+header:not(.scrolled) .btn-primary{box-shadow:0 15px 34px rgba(0,167,159,.38)}
+.hero{min-height:820px;padding-top:92px}
+.hero>.wrap{grid-template-columns:minmax(0,1.22fr) minmax(350px,.78fr);gap:clamp(34px,5vw,76px);align-items:center}
+.hero-product{align-self:center;transform:none;padding:16px;border-radius:34px;background:rgba(255,255,255,.97);border:1px solid rgba(255,255,255,.58);box-shadow:0 32px 90px rgba(0,0,0,.26)}
+.product-photo{position:relative;aspect-ratio:1/1;border-radius:25px;background:#edf5ee;box-shadow:inset 0 0 0 1px rgba(16,57,53,.05)}
+.product-photo img{object-fit:cover;object-position:center;width:100%;height:100%;transform:none!important}
+.product-photo-badge{position:absolute;left:14px;top:14px;padding:8px 11px;border-radius:999px;background:rgba(8,49,45,.82);color:#fff;font-size:10px;font-weight:900;letter-spacing:.04em;backdrop-filter:blur(8px)}
+.hero-product-meta{padding:18px 7px 4px}.hero-product-meta>strong{font-size:24px}.hero-product-meta>p{font-size:14px;line-height:1.55}
+.event-promo{display:inline-flex;align-items:center;margin-bottom:10px;padding:7px 10px;border-radius:999px;background:#eaf8de;color:#426b2b;font-size:11px;font-weight:900;text-transform:uppercase;letter-spacing:.06em}
+.price-row-promo{align-items:stretch;gap:10px}.promo-price{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:3px;padding:13px 8px;background:linear-gradient(180deg,#f5fffb,#e8f7f2);border:1px solid #a9ddd3}
+.promo-price .size{font-size:15px;color:var(--ink);font-weight:950}.regular-price{display:block;color:#7d8b88;text-decoration:line-through;text-decoration-thickness:2px;font-weight:750;font-size:12px}.promo-price strong{font-size:21px;color:var(--teal);line-height:1.1}.promo-price small{color:#4f756e;font-size:9px;text-transform:uppercase;letter-spacing:.03em}
+.product-showcase img{width:100%;aspect-ratio:1/1;object-fit:cover;object-position:center;border-radius:24px;box-shadow:var(--shadow2)}
+.price-card .amount{min-width:190px;display:flex;flex-direction:column;align-items:flex-end;justify-content:center;line-height:1.05}.price-card .amount .regular-price{font-size:15px}.price-card .amount .discount-price{font-size:34px;color:var(--teal);margin:4px 0}.price-card .amount small{font-size:11px;color:#5f7772;text-transform:uppercase;letter-spacing:.05em}
+@media(max-width:1100px){.brand img{width:165px!important}.nav{gap:13px}.nav a{font-size:12px}.hero>.wrap{grid-template-columns:1fr 390px}.hero h1{font-size:clamp(54px,7vw,78px)}}
+@media(max-width:900px){header{padding:10px 0}.brand img{width:142px!important;max-height:58px}.hero{padding-top:86px;min-height:auto}.hero>.wrap{grid-template-columns:1fr;gap:28px}.hero-product{width:min(100%,560px);justify-self:center}.product-photo{aspect-ratio:4/3}.hero h1{font-size:clamp(48px,12vw,72px)}.price-card .amount{min-width:150px}.nav{display:none}}
+@media(max-width:620px){.brand img{width:128px!important}.hero{padding-top:78px}.hero-product{padding:12px;border-radius:26px}.product-photo{aspect-ratio:4/3}.hero-product-meta{padding:14px 5px 3px}.price-row-promo{display:grid;grid-template-columns:1fr 1fr}.promo-price strong{font-size:18px}.price-card{align-items:flex-start}.price-card .amount{width:100%;align-items:flex-start;margin-top:12px}.price-card .amount .discount-price{font-size:30px}}
+</style><meta content="1.0" name="guaufresh-crm-schema"/><meta content="2.1-2026-08-01" name="guaufresh-landing-version"/><style id="gf-payment-footer-overrides">
+/* Payment modal and professional footer */
+.mobile-bar{grid-template-columns:repeat(2,1fr)!important;max-width:520px;margin-inline:auto}
+.payment-modal-card{position:relative;width:min(560px,100%);max-height:min(92vh,900px);overflow:auto;padding:30px!important;text-align:left!important;background:linear-gradient(180deg,#fff 0%,#f6fbf8 100%)!important}
+.payment-modal-x{position:absolute;right:18px;top:14px;width:38px;height:38px;border:0;border-radius:50%;background:#e9f6f2;color:var(--ink);font-size:25px;cursor:pointer}
+.payment-kicker{display:inline-flex;background:rgba(0,167,159,.1);color:var(--teal);padding:7px 11px;border-radius:999px;font-size:12px;font-weight:900;text-transform:uppercase;letter-spacing:.08em}
+.payment-modal-card h3{font-family:var(--display);font-size:clamp(30px,5vw,44px);line-height:1.02;margin:14px 0 8px;color:var(--ink)}
+.payment-intro{font-size:15px;line-height:1.65;color:var(--muted);margin:0 0 16px}
+.payment-qr-frame{background:#fff;border:1px solid rgba(0,167,159,.18);border-radius:24px;padding:12px;box-shadow:0 18px 45px rgba(14,46,43,.11)}
+.payment-qr-frame img{display:block;width:min(100%,390px)!important;max-height:none!important;margin:0 auto!important;border:0!important;border-radius:16px!important;object-fit:contain}
+.payment-steps{display:grid;grid-template-columns:repeat(3,1fr);gap:9px;margin:16px 0}
+.payment-steps span{display:flex;gap:8px;align-items:flex-start;background:#fff;border:1px solid var(--line);border-radius:15px;padding:12px;font-size:12px;line-height:1.35;color:var(--muted)}
+.payment-steps b{display:grid;place-items:center;flex:0 0 23px;height:23px;border-radius:50%;background:var(--teal);color:#fff}
+.payment-actions{display:grid;grid-template-columns:1fr auto;gap:10px}.payment-close{border:1px solid var(--line);background:#fff;color:var(--ink)}
+.payment-note{display:block;margin-top:12px;color:var(--muted);text-align:center}
+.site-footer{position:relative;overflow:hidden;background:linear-gradient(145deg,#0a302c 0%,#0e4942 58%,#087f78 140%);color:rgba(255,255,255,.76);padding:74px 0 26px}
+.site-footer::before{content:"";position:absolute;width:560px;height:560px;right:-240px;top:-310px;border-radius:50%;background:rgba(195,237,121,.09)}
+.footer-accent{position:absolute;left:0;right:0;top:0;height:6px;background:linear-gradient(90deg,#00A79F,#62CE92,#C3ED79,#F9F871)}
+.footer-grid{position:relative;display:grid;grid-template-columns:1.35fr .72fr .92fr 1fr;gap:44px;align-items:start}
+.footer-logo{display:block;width:175px!important;max-height:78px;object-fit:contain;object-position:left center;filter:brightness(0) invert(1);opacity:1!important;margin:0 0 18px}
+.footer-brand-block p{max-width:430px;font-size:14px;line-height:1.7;color:rgba(255,255,255,.78)}
+.footer-badges{display:flex;gap:7px;flex-wrap:wrap;margin-top:18px}.footer-badges span{border:1px solid rgba(255,255,255,.19);border-radius:999px;padding:7px 10px;font-size:11px;font-weight:800;color:#fff;background:rgba(255,255,255,.05)}
+.footer-column{display:grid;gap:10px}.footer-column h3{font-size:13px;color:#C3ED79;text-transform:uppercase;letter-spacing:.08em;margin:4px 0 10px}.footer-column a,.footer-payment,.footer-column p{font-size:13px;line-height:1.6;color:rgba(255,255,255,.78)}.footer-column a{text-decoration:none;transition:.2s}.footer-column a:hover{color:#fff;transform:translateX(2px)}
+.footer-payment{appearance:none;border:0;text-align:left;padding:0;background:transparent;cursor:pointer;font:inherit}.footer-payment:hover{color:#fff}
+.footer-info p{margin:0 0 4px}
+.footer-bottom{position:relative;display:flex;justify-content:space-between;align-items:center;gap:20px;border-top:1px solid rgba(255,255,255,.13);margin-top:44px;padding-top:22px}.footer-bottom p{margin:0;font-size:12px;color:rgba(255,255,255,.62)}
+.footer-bottom-actions{display:flex;gap:14px;align-items:center}.footer-privacy,.site-footer .gf-admin-link{position:static!important;margin:0!important;padding:0!important;border:0!important;background:transparent!important;color:rgba(255,255,255,.62)!important;font-size:11px!important;text-decoration:underline;text-underline-offset:3px;cursor:pointer}.footer-privacy:hover,.site-footer .gf-admin-link:hover{color:#fff!important}
+@media(max-width:980px){.footer-grid{grid-template-columns:1.2fr 1fr;gap:34px}.footer-brand-block{grid-column:1/-1}.footer-brand-block p{max-width:680px}}
+@media(max-width:620px){.payment-modal-card{padding:18px 14px!important;border-radius:22px!important;max-height:94vh}.payment-modal-card h3{font-size:28px;margin-top:10px}.payment-intro{font-size:13px;line-height:1.5;margin-bottom:10px}.payment-qr-frame{padding:8px}.payment-qr-frame img{width:min(100%,260px)!important}.payment-steps{grid-template-columns:1fr;gap:6px;margin:10px 0}.payment-steps span{padding:9px;font-size:11px}.payment-actions{grid-template-columns:1fr auto;gap:7px}.payment-actions .btn{text-align:center;justify-content:center;padding:11px 13px}.payment-note{font-size:10px;margin-top:8px}.footer-grid{grid-template-columns:1fr;gap:30px}.footer-brand-block{grid-column:auto}.site-footer{padding:58px 0 100px}.footer-bottom{align-items:flex-start;flex-direction:column}.footer-bottom-actions{width:100%;justify-content:space-between}.footer-logo{width:155px!important}}
+</style>
+<style id="guaufresh-responsive-v3">
+/* Responsive system — GuauFresh */
+:root{--gf-header-h:104px;--gf-mobile-bar-h:76px}
+html{scroll-padding-top:calc(var(--gf-header-h) + 14px)}
+section[id]{scroll-margin-top:calc(var(--gf-header-h) + 14px)}
+body{min-width:320px}
+.wrap{width:min(1180px,calc(100% - clamp(28px,5vw,64px)))}
+.title,.hero h1,.story-card h3,.gf-crm-card h2,.payment-modal-card h3{overflow-wrap:normal;word-break:normal;text-wrap:balance}
+p,.intro,.hero-lead{overflow-wrap:anywhere}
+header .head{min-height:72px}
+.gf-menu-toggle{display:none;width:48px;height:48px;border:1px solid rgba(0,167,159,.16);border-radius:16px;background:rgba(255,255,255,.94);box-shadow:0 10px 28px rgba(10,48,44,.12);padding:13px;align-content:center;gap:5px}
+.gf-menu-toggle span{display:block;width:100%;height:2px;background:#163f3d;border-radius:999px;transition:.2s}
+.gf-menu-toggle[aria-expanded="true"] span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+.gf-menu-toggle[aria-expanded="true"] span:nth-child(2){opacity:0}
+.gf-menu-toggle[aria-expanded="true"] span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+.gf-mobile-drawer{position:fixed;inset:0;z-index:1200;display:grid;grid-template-columns:1fr minmax(290px,390px);visibility:hidden;pointer-events:none}
+.gf-mobile-drawer.open{visibility:visible;pointer-events:auto}
+.gf-drawer-backdrop{border:0;background:rgba(4,28,26,.58);opacity:0;transition:opacity .25s}
+.gf-mobile-drawer.open .gf-drawer-backdrop{opacity:1}
+.gf-drawer-panel{height:100%;background:#fbfaf4;padding:22px;transform:translateX(100%);transition:transform .28s ease;box-shadow:-24px 0 70px rgba(7,42,38,.18);overflow:auto;display:flex;flex-direction:column}
+.gf-mobile-drawer.open .gf-drawer-panel{transform:none}
+.gf-drawer-head{display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid var(--line);padding-bottom:18px;color:var(--ink);font-weight:900}
+.gf-drawer-head button{width:42px;height:42px;border:0;border-radius:14px;background:#e9f6f2;color:var(--ink);font-size:28px;line-height:1}
+.gf-drawer-nav{display:grid;margin:18px 0}
+.gf-drawer-nav a{text-decoration:none;color:var(--ink);font-weight:850;padding:15px 4px;border-bottom:1px solid rgba(0,167,159,.12)}
+.gf-drawer-actions{display:grid;gap:10px;margin-top:auto;padding-top:20px}
+body.gf-drawer-open{overflow:hidden}
+
+/* More controlled desktop proportions */
+.hero{min-height:min(900px,100svh)}
+.hero>.wrap{min-height:min(900px,100svh);padding-top:132px;padding-bottom:54px;align-items:center}
+.hero-product{max-width:470px;justify-self:end}
+.product-photo{aspect-ratio:4/3}
+.hero h1{font-size:clamp(54px,6.3vw,88px);line-height:.98}
+.hero-lead{font-size:clamp(17px,1.45vw,20px)}
+.section{padding:clamp(72px,7vw,104px) 0}
+.section-head{margin-bottom:clamp(30px,4vw,48px)}
+.title{font-size:clamp(42px,5vw,66px);line-height:1.02}
+.story-card,.product-showcase,.tech-card,.gf-crm-card{min-width:0}
+.product-grid,.about-grid,.scenario-shell,.event-grid,.passport-grid,.contact-grid,.gf-crm-shell{min-width:0}
+
+@media(max-width:1180px){
+  :root{--gf-header-h:92px}
+  .wrap{width:min(calc(100% - 36px),1100px)}
+  .brand img{width:158px!important}
+  .nav{gap:12px}.nav a{font-size:12px}
+  .hero>.wrap{grid-template-columns:minmax(0,1.1fr) minmax(350px,.9fr);gap:38px}
+  .hero-product{max-width:430px}
+  .hero h1{font-size:clamp(52px,6.5vw,76px)}
+  .footer-grid{gap:30px}
+}
+
+@media(max-width:980px){
+  :root{--gf-header-h:82px}
+  header{padding:8px 0}
+  header .head{min-height:62px}
+  .brand img{width:142px!important;max-height:56px}
+  .nav{display:none!important}
+  .actions .btn-primary{display:none}
+  .gf-menu-toggle{display:grid}
+  .hero{min-height:auto;padding-top:0}
+  .hero>.wrap{min-height:auto;grid-template-columns:1fr;gap:30px;padding-top:122px;padding-bottom:54px;align-items:start}
+  .hero> .wrap>div:first-child{max-width:760px}
+  .hero-product{width:min(100%,760px);max-width:none;justify-self:center;display:grid;grid-template-columns:minmax(0,1.08fr) minmax(270px,.92fr);gap:16px;align-items:stretch;padding:14px}
+  .product-photo{aspect-ratio:4/3}
+  .hero-product-meta{display:flex;flex-direction:column;justify-content:center;padding:18px}
+  .price-row-promo{grid-template-columns:1fr}
+  .section-head{grid-template-columns:1fr;gap:14px}
+  .about-grid,.scenario-shell,.product-grid,.event-grid,.passport-grid,.contact-grid,.gf-crm-shell{grid-template-columns:1fr}
+  .about-grid,.product-grid,.event-grid,.passport-grid,.gf-crm-shell{gap:24px}
+  .facts{grid-template-columns:repeat(4,minmax(0,1fr))}
+  .steps{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .pricing{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .event-grid>*,.passport-grid>*{min-width:0}
+  .gf-crm-copy{max-width:720px}
+  .footer-grid{grid-template-columns:1.15fr 1fr;gap:32px}
+  .footer-brand-block{grid-column:1/-1}
+}
+
+@media(max-width:760px){
+  .wrap{width:min(calc(100% - 28px),720px)}
+  .hero>.wrap{padding-top:110px}
+  .hero h1{font-size:clamp(47px,10vw,68px)}
+  .hero-product{grid-template-columns:1fr 1fr}
+  .facts{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .pricing{grid-template-columns:1fr}
+  .price-card{grid-template-columns:1fr auto;align-items:center}
+  .price-card .amount{width:auto;align-items:flex-end;margin-top:0}
+  .footer-grid{grid-template-columns:1fr 1fr}
+  .footer-brand-block{grid-column:1/-1}
+  .payment-modal-card{width:min(94vw,560px)}
+}
+
+@media(max-width:620px){
+  :root{--gf-header-h:72px;--gf-mobile-bar-h:72px}
+  html{scroll-padding-top:82px}
+  section[id]{scroll-margin-top:82px}
+  .wrap{width:min(calc(100% - 22px),590px)}
+  header{padding:6px 0}
+  header .head{min-height:56px;gap:8px}
+  .brand img{width:126px!important;max-height:48px}
+  .actions{gap:6px}
+  .actions .icon,.gf-menu-toggle{width:44px;height:44px;border-radius:14px}
+  .hero-bg{background-position:58% center}
+  .hero>.wrap{padding-top:104px;padding-bottom:38px;gap:24px}
+  .hero h1{font-size:clamp(42px,12.2vw,54px);line-height:.96;margin:14px 0 18px}
+  .eyebrow{font-size:11px;letter-spacing:.08em}
+  .hero-lead{font-size:16px;line-height:1.6}
+  .hero-ctas{display:grid;grid-template-columns:1fr;gap:9px;margin:24px 0 20px}
+  .hero-ctas .btn{width:100%;min-height:52px;text-align:center}
+  .trust{display:flex;flex-wrap:nowrap;gap:8px;overflow-x:auto;padding-bottom:5px;scroll-snap-type:x proximity;scrollbar-width:none}
+  .trust::-webkit-scrollbar{display:none}.trust .pill{flex:0 0 auto;scroll-snap-align:start}
+  .hero-product{display:block;padding:11px;border-radius:24px;box-shadow:0 22px 55px rgba(0,0,0,.22)}
+  .product-photo{aspect-ratio:16/10;border-radius:19px}
+  .product-photo-badge{font-size:9px;top:10px;left:10px}
+  .hero-product-meta{padding:14px 6px 5px}
+  .hero-product-meta>strong{font-size:21px}
+  .hero-product-meta>p{font-size:13px}
+  .price-row-promo{grid-template-columns:1fr 1fr;gap:8px}
+  .promo-price{padding:11px 9px}.promo-price strong{font-size:18px}
+  .section{padding:58px 0}
+  .section-head{margin-bottom:28px}
+  .title{font-size:clamp(34px,10.5vw,45px);line-height:1.02}
+  .intro{font-size:16px;line-height:1.62}
+  .side-note{padding:15px;border-radius:16px}
+  .story-card,.product-showcase,.tech-card,.gf-crm-card{padding:22px;border-radius:24px}
+  .story-card h3{font-size:31px}
+  .facts{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+  .fact{padding:17px 14px;min-height:158px}.fact .num{font-size:31px}
+  .scenario-shell{gap:18px}.scenario-tabs{grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}.scenario-tab{min-height:54px;padding:10px;font-size:12px}
+  .scenario-visual,.scenario-info{border-radius:24px}
+  .product-showcase{gap:18px}.product-showcase img{aspect-ratio:16/10;border-radius:18px}
+  .ingredients{grid-template-columns:1fr}
+  .steps{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+  .step{padding:18px 15px;border-radius:20px}.step .n{font-size:40px}.step h3{font-size:17px}.step p{font-size:13px}
+  .precaution{padding:18px;border-radius:18px;font-size:13px}
+  .price-card{grid-template-columns:1fr;gap:10px;padding:22px;border-radius:24px}
+  .price-card .amount{width:100%;align-items:flex-start;margin-top:6px}.price-card .amount .discount-price{font-size:31px}
+  .event{padding:58px 0}
+  .discount{display:grid;width:100%;max-width:100%;grid-template-columns:auto minmax(0,1fr);gap:12px;padding:16px;margin:18px 0;font-size:14px;line-height:1.4}
+  .discount b{font-size:clamp(38px,12vw,50px);line-height:.92;white-space:nowrap}
+  .discount span{min-width:0;overflow-wrap:anywhere}
+  .passport-card{aspect-ratio:auto;min-height:480px}
+  .faq{gap:9px}.faq details{padding:16px;border-radius:16px}.faq summary{font-size:14px}
+  .gf-crm-benefits{gap:9px}.gf-crm-benefits article{padding:14px;border-radius:17px}
+  .gf-fields{gap:11px}.gf-field input,.gf-field select,.gf-field textarea{min-height:48px}
+  .gf-step-head{align-items:flex-start}.gf-step-head h3{font-size:24px}
+  .contact{padding:56px 0 calc(56px + var(--gf-mobile-bar-h))}
+  .contact-actions{display:grid;grid-template-columns:1fr;gap:9px}.contact-actions .btn{width:100%}
+  .mobile-bar{left:8px;right:8px;bottom:calc(8px + env(safe-area-inset-bottom));border-radius:18px;padding:7px;max-width:none;margin:0}
+  .mobile-bar a,.mobile-bar button{min-height:48px}
+  .site-footer{padding:54px 0 calc(94px + env(safe-area-inset-bottom))}
+  .footer-grid{grid-template-columns:1fr;gap:28px}.footer-brand-block{grid-column:auto}
+  .footer-bottom{gap:14px;margin-top:30px;padding-top:18px}.footer-bottom-actions{display:flex;flex-wrap:wrap;gap:10px;justify-content:flex-start}
+  .footer-logo{width:148px!important}
+  .payment-modal-card{padding:18px 12px!important}.payment-qr-frame img{width:min(100%,280px)!important}.payment-actions{grid-template-columns:1fr}.payment-actions .btn,.payment-actions .payment-close{width:100%}
+  .gf-mobile-drawer{grid-template-columns:42px 1fr}.gf-drawer-panel{padding:18px}
+}
+
+@media(max-width:420px){
+  .wrap{width:calc(100% - 20px)}
+  .brand img{width:116px!important}
+  .actions .icon,.gf-menu-toggle{width:42px;height:42px}
+  .hero h1{font-size:clamp(40px,12.5vw,48px)}
+  .facts,.steps{grid-template-columns:1fr}
+  .fact{min-height:auto}
+  .scenario-tabs{grid-template-columns:1fr 1fr}
+  .price-row-promo{grid-template-columns:1fr}
+  .gf-admin-stats{grid-template-columns:1fr}
+  .passport-card{min-height:430px}
+  .gf-mobile-drawer{grid-template-columns:18px 1fr}
+}
+
+@media(max-height:560px) and (orientation:landscape){
+  header{position:absolute}
+  .hero>.wrap{padding-top:92px}
+  .mobile-bar{display:none!important}
+}
+
+@media(prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}.gf-drawer-panel,.gf-drawer-backdrop,.gf-menu-toggle span{transition:none!important}
+}
+</style>
+
+<style id="guaufresh-responsive-v3-fixes">
+.gf-mobile-drawer{display:block;overflow:hidden}
+.gf-drawer-backdrop{position:absolute;inset:0;width:100%;height:100%}
+.gf-drawer-panel{position:absolute;right:0;top:0;width:min(390px,calc(100% - 18px));max-width:100%;}
+.hero-product>.product-photo{width:100%;height:auto;min-width:0;align-self:center}
+.hero-product>.hero-product-meta{min-width:0}
+@media(max-width:980px) and (min-width:621px){
+  .hero-product{grid-template-columns:minmax(0,1.12fr) minmax(250px,.88fr)}
+  .hero-product>.product-photo{aspect-ratio:4/3}
+  .hero-product-meta{padding:14px 12px}
+  .hero-product-meta>strong{font-size:21px}
+  .hero-product-meta>p{font-size:13px}
+  .price-row-promo{grid-template-columns:1fr 1fr}
+  .promo-price{padding:10px 8px}.promo-price strong{font-size:17px}
+}
+@media(max-width:620px){.gf-drawer-panel{width:calc(100% - 18px)}}
+</style>
+
+<style id="guaufresh-mobilebar-ux">
+@media(max-width:900px){
+  .mobile-bar{opacity:0;transform:translateY(calc(100% + 26px));pointer-events:none;transition:opacity .22s ease,transform .22s ease}
+  body.gf-mobile-bar-visible .mobile-bar{opacity:1;transform:translateY(0);pointer-events:auto}
+}
+@media(prefers-reduced-motion:reduce){.mobile-bar{transition:none!important}}
+</style>
+<style id="guaufresh-responsive-v4">
+/* Final containment pass: every layout track may shrink to the viewport. */
+html,body{max-width:100%;overflow-x:clip}
+body{min-width:0}
+main,section,header,footer,.wrap{min-width:0;max-width:100%}
+.hero>.wrap{grid-template-columns:minmax(0,1fr) minmax(0,470px)}
+.hero>.wrap>*,.hero-product>*,.section-head>*,.about-grid>*,.scenario-shell>*,.product-grid>*,.event-grid>*,.passport-grid>*,.contact-grid>*,.gf-crm-shell>*,.footer-grid>*{min-width:0;max-width:100%}
+.hero h1,.title,.contact h2,.story-card h3,.gf-crm-card h2{max-width:100%}
+.btn,.icon,a,button{min-width:0}
+.btn{max-width:100%;white-space:normal;text-align:center}
+input,select,textarea{width:100%;max-width:100%;min-width:0}
+img,svg,canvas,video{max-width:100%;height:auto}
+.discount{max-width:100%}
+.discount span{min-width:0;overflow-wrap:anywhere}
+.modal-card,.gf-modal-card,.payment-modal-card{max-width:calc(100vw - 20px)}
+
+@media(max-width:980px){
+  .hero>.wrap{grid-template-columns:minmax(0,1fr)}
+  .hero-product{max-width:100%;min-width:0}
+}
+
+@media(max-width:620px){
+  .hero-copy,.hero>.wrap>div:first-child{width:100%;min-width:0;max-width:100%}
+  .hero h1{overflow-wrap:anywhere}
+  .hero-ctas,.hero-ctas .btn{min-width:0;max-width:100%}
+  .event-grid{width:100%}
+  .event-card{width:100%;padding:22px;border-radius:24px}
+  .event-card h3{font-size:24px}
+  .discount{display:grid;width:100%;grid-template-columns:auto minmax(0,1fr);align-items:center;gap:12px;border-radius:18px;padding:15px}
+  .discount b{font-size:clamp(38px,12vw,50px);line-height:.92;white-space:nowrap}
+  .discount span{font-size:13px;line-height:1.35}
+  .gf-crm-card,.story-card,.product-showcase,.tech-card{width:100%}
+  .gf-step-actions,.gf-success-actions,.passport-actions{min-width:0}
+  .gf-step-actions .btn,.gf-success-actions .btn,.passport-actions .btn{min-width:0}
+  .payment-modal-card,.gf-modal-card{width:calc(100vw - 20px)!important}
+  .mobile-bar{width:auto;max-width:calc(100vw - 16px)}
+}
+
+@media(max-width:360px){
+  .wrap{width:calc(100% - 18px)}
+  .brand img{width:108px!important}
+  .actions .icon,.gf-menu-toggle{width:40px;height:40px}
+  .hero h1{font-size:clamp(37px,12vw,43px)}
+  .title{font-size:clamp(31px,10vw,37px)}
+  .price-row-promo{grid-template-columns:1fr}
+  .discount{grid-template-columns:1fr;gap:8px}
+  .discount b{font-size:42px}
+  .payment-actions,.passport-actions,.gf-step-actions{grid-template-columns:1fr;display:grid}
+}
+</style>
+<style id="guaufresh-hero-image-v5">
+/* Render the hero photograph as a real image so mobile browsers can size and
+   decode it reliably. The contrast layer remains separate from the photo. */
+.hero-bg{background:none!important;overflow:hidden}
+.hero-bg-image{position:absolute;inset:0;width:100%;height:100%!important;max-width:none;object-fit:cover;object-position:50% 57%;display:block}
+.hero-bg::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(12,42,39,.92),rgba(12,42,39,.68) 45%,rgba(12,42,39,.22) 75%);pointer-events:none}
+@media(max-width:620px){
+  .hero{background:#102d2a}
+  .hero-bg{inset:var(--gf-header-h) 0 auto;height:clamp(270px,78vw,340px);border-radius:0 0 26px 26px}
+  .hero-bg-image{object-position:54% 62%}
+  .hero-bg::after{background:linear-gradient(180deg,rgba(10,36,34,.08) 0%,rgba(10,36,34,.12) 48%,#102d2a 100%)}
+  .hero>.wrap{padding-top:calc(var(--gf-header-h) + clamp(260px,76vw,330px) + 30px)}
+}
+</style>
+<style id="salchimanada-alliance-and-passport-v6">
+.alliance-chip{display:inline-flex;align-items:center;gap:11px;margin-top:18px;padding:9px 13px 9px 9px;border:1px solid rgba(255,255,255,.22);border-radius:18px;background:rgba(255,255,255,.12);color:#fff;backdrop-filter:blur(10px);box-shadow:0 12px 32px rgba(0,0,0,.12)}
+.alliance-chip img{width:48px;height:48px;object-fit:cover;border-radius:13px;background:#f7eee6}.alliance-chip small{display:block;font-size:10px;text-transform:uppercase;letter-spacing:.11em;opacity:.72;font-weight:850}.alliance-chip strong{display:block;font-size:13px;line-height:1.2}
+.event-partner{display:flex;align-items:center;gap:14px;margin:0 0 22px;padding:12px;border-radius:20px;background:var(--soft);border:1px solid var(--line)}.event-partner img{width:68px;height:68px;object-fit:cover;border-radius:16px}.event-partner small{display:block;color:var(--teal);font-size:10px;text-transform:uppercase;letter-spacing:.1em;font-weight:900}.event-partner strong{display:block;color:var(--ink);font-size:16px}.event-partner p{font-size:12px;margin:2px 0 0}
+.passport-photo{background-repeat:no-repeat;background-color:#dfeee5;transition:background-position .18s ease}
+.photo-position-control{display:grid;grid-template-columns:auto 1fr auto;align-items:center;gap:10px;margin-top:9px;color:#607572;font-size:11px}.photo-position-control input{padding:0;accent-color:var(--teal)}
+.passport-partner{position:absolute;z-index:3;right:18px;top:18px;width:70px;height:70px;object-fit:cover;border-radius:18px;background:#f7eee6;border:3px solid rgba(255,255,255,.9);box-shadow:0 8px 22px rgba(0,0,0,.2)}
+.passport-guaufresh{position:absolute;z-index:3;left:18px;top:18px;width:132px;height:54px;object-fit:contain;padding:9px 12px;border-radius:16px;background:rgba(255,255,255,.94);box-shadow:0 8px 22px rgba(0,0,0,.18)}
+.passport-collab{display:flex;align-items:center;gap:10px;margin-bottom:13px}.passport-collab .passport-logo{margin:0}.passport-collab span{font-size:11px;line-height:1.25;color:rgba(255,255,255,.82);border-left:1px solid rgba(255,255,255,.35);padding-left:10px}
+@media(max-width:1100px){.nav{gap:9px}.nav a{font-size:11px}}
+@media(max-width:620px){.alliance-chip{width:100%;max-width:330px}.passport-form,.passport-preview{padding:18px;border-radius:24px}.passport-info{left:20px;right:20px;bottom:22px}.passport-partner{width:58px;height:58px;right:14px;top:14px}.passport-guaufresh{width:112px;height:48px;left:14px;top:14px}.passport-name{font-size:38px}.passport-collab .passport-logo{width:122px}}
+</style>
+</head>
+<body>
+<div class="progress" id="progress"></div>
+<header id="header">
+<div class="wrap head">
+<a aria-label="GuauFresh, inicio" class="brand" href="#inicio"><img alt="GuauFresh" src="assets/embedded-cc0342b7a1.png"/></a>
+<nav aria-label="Navegación principal" class="nav">
+<a href="#guaufresh">GuauFresh</a><a href="#momentos">Momentos</a><a href="#producto">Producto</a><a href="#uso">Cómo usar</a><a href="#evento">Beneficio</a>
+<a href="#pasaporte">Pasaporte</a><a href="#registro">Registro</a></nav>
+<div class="actions">
+
+<button aria-label="Pagar con QR" class="icon" data-qr="" title="Pagar con QR"><svg fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24"><rect height="7" width="7" x="3" y="3"></rect><rect height="7" width="7" x="14" y="3"></rect><rect height="7" width="7" x="3" y="14"></rect><path d="M14 14h3v3h-3zM18 18h3v3h-3z"></path></svg></button>
+<a class="btn btn-primary" href="https://wa.me/573218522599?text=Hola%2C%20conoc%C3%AD%20GuauFresh%20en%20el%20encuentro%20de%20perros%20salchicha%20y%20quiero%20informaci%C3%B3n." rel="noopener" target="_blank">Escríbenos</a><button class="gf-menu-toggle" id="gfMenuToggle" type="button" aria-label="Abrir menú" aria-controls="gfMobileDrawer" aria-expanded="false"><span></span><span></span><span></span></button>
+</div>
+</div>
+</header>
+<div class="gf-mobile-drawer" id="gfMobileDrawer" aria-hidden="true">
+  <button class="gf-drawer-backdrop" type="button" aria-label="Cerrar menú" data-close-drawer></button>
+  <aside class="gf-drawer-panel" aria-label="Menú móvil">
+    <div class="gf-drawer-head">
+      <span>Explora GuauFresh</span>
+      <button type="button" aria-label="Cerrar menú" data-close-drawer>×</button>
+    </div>
+    <nav class="gf-drawer-nav">
+      <a href="#guaufresh">Nuestra propuesta</a>
+      <a href="#momentos">Momentos GuauFresh</a>
+      <a href="#producto">Producto y presentaciones</a>
+      <a href="#uso">Cómo usar</a>
+      <a href="#evento">Beneficio</a>
+      <a href="#pasaporte">Crea su pasaporte</a>
+      <a href="#registro">Registro</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+    <div class="gf-drawer-actions">
+      <button class="btn btn-secondary" type="button" data-qr>Pagar con QR</button>
+      <a class="btn btn-primary" href="https://wa.me/573218522599" rel="noopener" target="_blank">Escríbenos por WhatsApp</a>
+    </div>
+  </aside>
+</div>
+
+<main>
+<section class="hero" id="inicio">
+<div class="hero-bg">
+<img alt="Perro salchicha en un encuentro" class="hero-bg-image" decoding="async" fetchpriority="high" src="assets/hero-salchicha.webp"/>
+</div>
+<div class="wrap">
+<div>
+<span class="eyebrow"><i></i> Cuidado entre baños</span>
+<h1>Momentos reales, <em>cuidado práctico.</em></h1>
+<p class="hero-lead">GuauFresh acompaña la rutina de tu perro con una espuma limpiadora de uso externo que limpia en seco, ayuda a humectar la piel y aporta brillo y suavidad al pelaje.</p>
+<div class="alliance-chip"><img alt="Logo de La SalchiManada del Río" src="assets/logo-salchimanada-del-rio.webp"/><span><small>En alianza con</small><strong>La SalchiManada del Río</strong></span></div>
+<div class="hero-ctas">
+<a class="btn btn-primary" href="#momentos">Encuentra tu momento GuauFresh</a>
+<button aria-label="Pagar con QR" class="btn btn-secondary" data-qr="" title="Pagar con QR">Pagar con QR</button>
+</div>
+<div class="trust"><span class="pill"><b>150 mL</b> presentación documentada</span><span class="pill"><b>Sin agua</b> entre baños</span><span class="pill"><b>Uso externo</b> para perros</span></div>
+</div>
+<aside aria-label="Producto y precios" class="hero-product">
+<div class="product-photo"><img alt="Espuma limpiadora GuauFresh de 150 mL en una fotografía real de producto" decoding="async" loading="eager" src="assets/embedded-962c5f1dd0.webp"/><span class="product-photo-badge">Foto real del producto</span></div>
+<div class="hero-product-meta"><div class="event-promo">Beneficio exclusivo · 15 % en el evento</div><strong>Espuma limpiadora GuauFresh</strong><p>Ideal para huellas y pelaje, después del paseo o cuando un baño tradicional no es necesario.</p><div aria-label="Precios con 15 por ciento de descuento" class="price-row price-row-promo">
+<div class="price-tag promo-price">
+<span class="size">50 mL</span>
+<span class="regular-price">$20.000 COP</span>
+<strong>$17.000 COP</strong>
+<small>15 % de descuento</small>
+</div>
+<div class="price-tag promo-price">
+<span class="size">150 mL</span>
+<span class="regular-price">$40.000 COP</span>
+<strong>$34.000 COP</strong>
+<small>15 % de descuento</small>
+</div>
+</div><p style="font-size:12px;margin-top:10px">Precio especial del encuentro. Domicilio no incluido. Disponibilidad sujeta a inventario.</p></div>
+</aside>
+</div>
+</section>
+<section class="section" id="guaufresh">
+<div class="wrap">
+<div class="section-head"><div><div class="kicker">La marca</div><h2 class="title">Cuidado que se siente, <em>amor que se nota.</em></h2><p class="intro">GuauFresh nace del amor por los perros y de una idea sencilla: hacer más fácil la limpieza cotidiana sin convertir cada paseo, lluvia o aventura en un baño completo.</p></div><p class="side-note">La información de producto de esta página se construyó con la ficha técnica disponible, la etiqueta y los lineamientos del manual de marca de GuauFresh.</p></div>
+<div class="about-grid">
+<article class="story-card"><h3>Más bienestar, menos complicaciones.</h3><p>La espuma está pensada como complemento del baño tradicional. Se aplica directamente, se masajea en círculos y se retira con una toalla húmeda. Es una solución práctica para huellas, zonas puntuales del pelaje y rutinas rápidas entre baños.</p><p><strong>Mensaje central:</strong> no reemplaza el baño con agua; lo complementa cuando tu perro necesita un refresh rápido.</p></article>
+<div class="facts">
+<article class="fact"><div class="num">4</div><strong>pasos de uso</strong><p>Agitar, aplicar, masajear y retirar con toalla húmeda.</p></article>
+<article class="fact"><div class="num">1 año</div><strong>vida útil estimada</strong><p>Según la ficha técnica del producto terminado.</p></article>
+<article class="fact"><div class="num">150 mL</div><strong>envase documentado</strong><p>Botella plástica con válvula dispensadora.</p></article>
+<article class="fact"><div class="num">0 agua</div><strong>en la aplicación</strong><p>Limpieza en seco para huellas y pelaje, sin enjuague.</p></article>
+</div>
+</div>
+</div>
+</section>
+<section class="section alt" id="momentos">
+<div class="wrap">
+<div class="section-head"><div><div class="kicker">Momentos GuauFresh</div><h2 class="title">¿Cuándo puede ayudarte <em>GuauFresh?</em></h2><p class="intro">Selecciona una situación cotidiana y recibe una recomendación de uso concreta.</p></div></div>
+<div class="scenario-shell">
+<figure class="scenario-image"><img alt="Perro salchicha real descansando en el césped después del paseo" src="assets/embedded-60b87b429c.webp"/><figcaption class="caption">Una rutina breve después del paseo ayuda a revisar patas, retirar tierra superficial y regresar a casa con más comodidad.</figcaption></figure>
+<div class="scenario-panel">
+<div class="scenario-tabs" role="tablist"><button class="scenario-tab active" data-scenario="parque">Después del parque</button><button class="scenario-tab" data-scenario="lluvia">Después de la lluvia</button><button class="scenario-tab" data-scenario="carro">Antes de subir al carro</button><button class="scenario-tab" data-scenario="sofa">Antes del sofá</button></div>
+<div aria-live="polite" class="result"><span class="badge" id="scenarioBadge">PATAS Y PELAJE</span><h3 id="scenarioTitle">Regreso del parque</h3><p id="scenarioText">Revisa las patas, retira hojas o tierra suelta y usa una pequeña cantidad de espuma en las zonas que realmente lo necesitan.</p><ul class="checklist" id="scenarioList"><li>Aplica poca espuma y aumenta solo si hace falta.</li><li>Masajea suavemente en círculos.</li><li>Retira con una toalla húmeda y limpia.</li></ul></div>
+</div>
+</div>
+</div>
+</section>
+<section class="section" id="producto">
+<div class="wrap">
+<div class="section-head"><div><div class="kicker">Producto real</div><h2 class="title">Espuma limpiadora <em>para perros.</em></h2><p class="intro">La ficha técnica describe una espuma a base de extractos y proteínas de origen vegetal que limpia en seco, humecta la piel y aporta brillo y suavidad al pelaje.</p></div><p class="side-note">La etiqueta oficial visible en el envase indica “Para perros”. Por eso esta versión no atribuye uso en gatos sin una ficha técnica actualizada que lo respalde.</p></div>
+<div class="product-grid">
+<article class="product-showcase"><img alt="Fotografía real de la espuma limpiadora GuauFresh de 150 mL" decoding="async" loading="lazy" src="assets/embedded-962c5f1dd0.webp"/><div class="product-copy"><h3>Un básico para la rutina entre baños.</h3><p>Su formato con bomba permite dosificar la espuma directamente sobre el pelaje o sobre la mano. Es ideal para zonas específicas, huellas y limpieza rápida.</p><div class="claims"><span class="claim">Baño en seco</span><span class="claim">Huella y pelaje</span><span class="claim">Brillo y suavidad</span><span class="claim">Libre de parabenos</span><span class="claim">Libre de sulfatos</span><span class="claim">Vegano</span></div></div></article>
+<article class="tech-card"><h3>¿Qué contiene?</h3><p>La formulación disponible combina proteína de trigo hidrolizada con tensioactivos suaves utilizados para la limpieza.</p><div class="ingredients"><div class="ingredient"><strong>Proteína de trigo hidrolizada</strong><small>Componente de origen vegetal asociado al acondicionamiento del pelaje.</small></div><div class="ingredient"><strong>Decyl glucoside</strong><small>Tensioactivo de limpieza.</small></div><div class="ingredient"><strong>Lauryl glucoside</strong><small>Co-tensioactivo usado para apoyar la limpieza y la formación de espuma.</small></div><div class="ingredient"><strong>Aceite de ricino hidrogenado PEG-40</strong><small>Solubilizante incluido en la fórmula técnica.</small></div></div><details><summary>Ver composición completa</summary><div class="composition">Aqua, hydrolyzed wheat protein, decyl glucoside, lauryl glucoside, PEG-40 hydrogenated castor oil, parfum, EDTA, DMDM hydantoin, methylchloroisothiazolinone y methylisothiazolinone.</div></details></article>
+</div>
+</div>
+</section>
+<section class="section alt" id="uso">
+<div class="wrap">
+<div class="section-head"><div><div class="kicker">Modo de uso</div><h2 class="title">Una rutina simple en <em>cuatro pasos.</em></h2><p class="intro">Aplica solo la cantidad necesaria y concentra la limpieza en las zonas que se ensuciaron.</p></div></div>
+<div class="steps"><article class="step"><div class="n">01</div><h3>Agita antes de usar</h3><p>Agita bien el envase para ayudar a mantener la mezcla homogénea.</p></article><article class="step"><div class="n">02</div><h3>Aplica la espuma</h3><p>Presiona la válvula en posición vertical y dosifica directamente sobre el pelaje o en tu mano.</p></article><article class="step"><div class="n">03</div><h3>Masajea en círculos</h3><p>Distribuye suavemente la espuma en la zona que deseas limpiar.</p></article><article class="step"><div class="n">04</div><h3>Retira la suciedad</h3><p>Limpia con una toalla húmeda hasta retirar el exceso y la suciedad superficial.</p></article></div>
+<div class="precaution"><strong>Precauciones:</strong> producto de uso externo. Evita la ingestión y el contacto con los ojos. Si aparece irritación, suspende su uso. Mantén el envase original en un lugar fresco y seco, lejos de la luz solar y fuera del alcance de niños y animales domésticos.</div>
+</div>
+</section>
+<section class="section" id="presentaciones">
+<div class="wrap">
+<div class="section-head"><div><div class="kicker">Presentaciones</div><h2 class="title">Elige el tamaño para <em>tu rutina.</em></h2><p class="intro">Dos opciones definidas para la comunicación comercial del evento.</p></div></div>
+<div class="pricing"><article class="price-card"><div><h3>50 mL</h3><p>Formato compacto para llevar en el bolso o en el carro durante paseos y viajes.</p><span class="note">Presentación comunicada para el evento; disponibilidad sujeta a inventario.</span></div><div class="amount"><span class="regular-price">$20.000</span><strong class="discount-price">$17.000</strong><small>COP · 15 % de descuento</small></div></article><article class="price-card featured"><div><h3>150 mL</h3><p>Presentación documentada en la ficha técnica y pensada para la rutina frecuente en casa.</p><span class="note">Envase plástico con válvula dispensadora.</span></div><div class="amount"><span class="regular-price">$40.000</span><strong class="discount-price">$34.000</strong><small>COP · 15 % de descuento</small></div></article></div>
+<p style="text-align:center;font-size:13px;margin-top:15px">Precios en COP. Domicilio no incluido.</p>
+</div>
+</section>
+<section class="section event" id="evento">
+<div class="wrap event-grid">
+<div><div class="kicker" style="color:var(--lime)">Beneficio del encuentro</div><h2 class="title">Por hacer parte del club, tienes un <em>15 % de descuento.</em></h2><p class="intro">Activa el beneficio siguiendo al club anfitrión del encuentro y a <strong>@guau_fresh</strong> en Instagram.</p><div class="discount"><b>15 %</b><span>sobre el producto durante la vigencia comunicada en el evento</span></div><p style="font-size:13px;color:rgba(255,255,255,.65)">El beneficio no incluye domicilio y no es acumulable con otras promociones, salvo que el equipo GuauFresh indique lo contrario.</p></div>
+<div class="event-card"><div class="event-partner"><img alt="Logo de La SalchiManada del Río" loading="lazy" src="assets/logo-salchimanada-del-rio.webp"/><div><small>Club aliado</small><strong>La SalchiManada del Río</strong><p>Comunidad anfitriona del encuentro salchicha.</p></div></div><h3>Actívalo en tres pasos</h3><ol><li>Sigue a <strong>La SalchiManada del Río</strong>.</li><li>Sigue a <strong>@guau_fresh</strong>.</li><li>Muestra las dos cuentas seguidas al equipo del stand o envía la evidencia por WhatsApp.</li></ol><button class="btn btn-primary" id="unlockCoupon">Mostrar código del evento</button><div class="coupon" id="coupon"><span>Tu código es</span><strong>SALCHIGUAU15</strong><p>Compártelo por WhatsApp para consultar disponibilidad.</p><a class="btn btn-primary" href="https://wa.me/573218522599?text=Hola%2C%20quiero%20activar%20el%20beneficio%20SALCHIGUAU15%20del%20encuentro%20de%20perros%20salchicha." rel="noopener" target="_blank">Usar por WhatsApp</a></div></div>
+</div>
+</section>
+<section class="section alt" id="pasaporte">
+<div class="wrap">
+<div class="section-head"><div><div class="kicker">Experiencia interactiva</div><h2 class="title">Crea el pasaporte de <em>tu salchicha.</em></h2><p class="intro">Personaliza una tarjeta para compartir en historias. La foto se procesa localmente en tu navegador y no se envía a ningún servidor.</p></div></div>
+<div class="passport-grid"><form class="passport-form" id="passportForm"><div class="field"><label for="petName">Nombre de tu perro</label><input id="petName" maxlength="24" required="" value="Bruno"/></div><div class="field"><label for="petTrait">Su personalidad</label><select id="petTrait"><option>Explorador de parques</option><option>Cazador de charcos</option><option>Profesional del sofá</option><option>Compañero de viajes</option></select></div><div class="field"><label for="petPhoto">Foto real</label><input accept="image/*" id="petPhoto" type="file"/><div class="photo-position-control"><span>Arriba</span><input aria-label="Ajustar posición vertical de la foto" id="petPhotoPosition" max="100" min="0" type="range" value="50"/><span>Abajo</span></div></div><button class="btn btn-primary" type="submit">Actualizar pasaporte</button><p style="font-size:12px;margin-top:12px">Después de subirla, mueve el control para centrar la cara dentro del pasaporte.</p></form><div class="passport-preview"><div class="passport-card" id="passportCard"><div class="passport-photo" id="passportPhoto"></div><img alt="GuauFresh" class="passport-guaufresh" src="assets/embedded-cc0342b7a1.png"/><img alt="La SalchiManada del Río" class="passport-partner" src="assets/logo-salchimanada-del-rio.webp"/><div class="passport-info"><div class="passport-collab"><span>Pasaporte creado por <strong>GuauFresh</strong> y<br/><strong>La SalchiManada del Río</strong></span></div><div class="passport-name" id="passportName">Bruno</div><div class="passport-trait" id="passportTrait">Explorador de parques</div><div class="passport-mini">Pasaporte oficial de la manada salchicha</div></div></div><div class="passport-actions"><button class="btn btn-secondary" id="downloadPassport" type="button">Descargar PNG</button><button class="btn btn-soft" id="sharePassport" type="button">Compartir</button></div></div></div>
+</div>
+</section>
+<section class="section" id="faq">
+<div class="wrap"><div class="section-head"><div><div class="kicker">Preguntas frecuentes</div><h2 class="title">Información clara antes de <em>usar el producto.</em></h2></div></div><div class="faq"><details><summary>¿Reemplaza el baño tradicional?</summary><p>No. GuauFresh está planteado como complemento para limpieza puntual y rutinas entre baños.</p></details><details><summary>¿Dónde se puede aplicar?</summary><p>La ficha técnica indica uso en huellas y pelaje. Evita ojos, boca, mucosas, heridas abiertas o zonas visiblemente irritadas.</p></details><details><summary>¿Cómo debe almacenarse?</summary><p>En el recipiente original, en un lugar fresco y seco, evitando la exposición directa a la luz solar.</p></details><details><summary>¿Cuál es la vida útil?</summary><p>La ficha técnica disponible estima una vida útil de un año. Revisa el lote y la información impresa en el envase que recibas.</p></details><details><summary>¿Está documentado para gatos?</summary><p>La ficha técnica y la etiqueta disponibles identifican el producto como espuma limpiadora para perros. Se requiere documentación técnica actualizada antes de comunicar uso en gatos.</p></details><details><summary>¿Qué hago si aparece irritación?</summary><p>Suspende el uso y consulta con un profesional veterinario si la molestia persiste.</p></details></div></div>
+</section>
+<section aria-labelledby="registro-title" class="section gf-crm-section" id="registro">
+<div class="wrap">
+<div class="gf-crm-shell">
+<div class="gf-crm-copy">
+<div class="kicker">Comunidad GuauFresh</div>
+<h2 class="title" id="registro-title">Únete a la manada y recibe <em>novedades útiles.</em></h2>
+<p class="intro">Registra tus datos para conocer disponibilidad, beneficios de eventos, consejos de cuidado y próximos lanzamientos de GuauFresh.</p>
+<div class="gf-crm-benefits">
+<article><span>01</span><div><strong>Atención personalizada</strong><p>Te contactamos según la presentación y el tipo de información que realmente te interesa.</p></div></article>
+<article><span>02</span><div><strong>Historial de tu mascota</strong><p>La estructura queda preparada para asociar una o varias mascotas a cada cliente.</p></div></article>
+<article><span>03</span><div><strong>Información útil para tu rutina</strong><p>Recibe recomendaciones, novedades y beneficios relacionados con el cuidado cotidiano de tu mascota.</p></div></article>
+</div>
+<div hidden="" id="gfBackendStatus"><b></b><span></span></div>
+</div>
+<div class="gf-crm-card">
+<div class="gf-step-head">
+<div><small>Registro de clientes</small><strong id="gfStepTitle">Datos de contacto</strong></div>
+<div aria-label="Paso del formulario" class="gf-step-dots"><i class="active"></i><i></i></div>
+</div>
+<form id="gfClientForm" novalidate="">
+<div class="gf-form-step active" data-step="1">
+<div class="gf-fields">
+<label class="gf-field full"><span>Nombre completo *</span><input autocomplete="name" id="gfFullName" maxlength="80" name="fullName" placeholder="Ej. Laura Jaramillo" required=""/></label>
+<label class="gf-field"><span>WhatsApp *</span><input autocomplete="tel" id="gfPhone" inputmode="tel" maxlength="20" name="phone" placeholder="321 852 2599" required=""/></label>
+<label class="gf-field"><span>Correo electrónico</span><input autocomplete="email" id="gfEmail" inputmode="email" maxlength="120" name="email" placeholder="correo@ejemplo.com"/></label>
+<label class="gf-field"><span>Ciudad *</span><input autocomplete="address-level2" id="gfCity" maxlength="60" name="city" required="" value="Medellín"/></label>
+<label class="gf-field"><span>Barrio o sector</span><input autocomplete="address-level3" id="gfNeighborhood" maxlength="80" name="neighborhood" placeholder="Opcional"/></label>
+</div>
+<div class="gf-form-actions"><button class="btn btn-primary" id="gfNextStep" type="button">Continuar</button></div>
+</div>
+<div class="gf-form-step" data-step="2">
+<div class="gf-fields">
+<label class="gf-field"><span>Nombre de tu mascota *</span><input id="gfPetName" maxlength="50" name="petName" placeholder="Ej. Bruno" required=""/></label>
+<label class="gf-field"><span>Especie *</span><select id="gfSpecies" name="species" required=""><option value="perro">Perro</option><option value="gato">Gato</option><option value="ambos">Convivo con perros y gatos</option></select></label>
+<label class="gf-field"><span>Raza</span><input id="gfBreed" maxlength="60" name="breed" placeholder="Ej. Dachshund / mestizo"/></label>
+<label class="gf-field"><span>Tamaño</span><select id="gfPetSize" name="petSize"><option value="pequeno">Pequeño</option><option value="mediano">Mediano</option><option value="grande">Grande</option><option value="no_aplica">No aplica</option></select></label>
+<label class="gf-field"><span>Presentación de interés</span><select id="gfPresentation" name="presentation"><option value="50ml">50 mL · $17.000 COP (15 % evento)</option><option value="150ml">150 mL · $34.000 COP (15 % evento)</option><option value="ambas">Quiero conocer ambas</option><option value="asesoria">Necesito asesoría</option></select></label>
+<label class="gf-field"><span>¿Qué deseas recibir?</span><select id="gfInterest" name="interest"><option value="compra">Información para comprar</option><option value="promociones">Promociones y eventos</option><option value="cuidado">Consejos de cuidado</option><option value="distribucion">Información para distribuir</option><option value="alianzas">Alianzas y clubes</option></select></label>
+<label class="gf-field full"><span>Club o evento</span><input id="gfClub" maxlength="100" name="club" placeholder="Club, feria o evento (opcional)" value=""/></label>
+<label aria-hidden="true" class="gf-honeypot">Empresa<input autocomplete="off" id="gfCompany" name="company" tabindex="-1"/></label>
+<label class="gf-consent full"><input id="gfConsent" name="consent" required="" type="checkbox"/><span>Autorizo el tratamiento de mis datos para recibir información de GuauFresh por WhatsApp o correo. Puedo solicitar su actualización o eliminación en cualquier momento. *</span></label>
+</div>
+<div class="gf-form-actions split"><button class="btn gf-back" id="gfPrevStep" type="button">Volver</button><button class="btn btn-primary" id="gfSubmitLead" type="submit">Guardar registro</button></div>
+</div>
+</form>
+<div aria-live="polite" class="gf-success" id="gfSuccess">
+<div class="gf-success-icon">✓</div><small>Registro guardado</small><h3>¡Ya eres parte de la manada!</h3><p id="gfSuccessMessage">Tus datos quedaron registrados correctamente.</p><code id="gfLeadCode"></code>
+<div class="gf-success-actions"><a class="btn btn-primary" id="gfSuccessWhatsapp" rel="noopener" target="_blank">Continuar por WhatsApp</a><button class="btn gf-back" id="gfNewLead" type="button">Registrar otra persona</button></div>
+</div>
+<p class="gf-privacy-note">Tus datos se usan para atender tu solicitud y enviarte información de GuauFresh. No solicitamos contraseñas ni datos de pago. <button id="gfOpenPrivacy" type="button">Ver tratamiento de datos</button></p>
+</div>
+</div>
+</div>
+</section><section class="contact" id="contacto"><div class="wrap contact-grid"><div><h2>¿Listos para volver a casa más frescos?</h2><p>Escríbenos para consultar disponibilidad, activar el beneficio disponible o conocer las presentaciones de GuauFresh.</p></div><div class="contact-actions"><a class="btn btn-secondary" href="https://wa.me/573218522599?text=Hola%2C%20quiero%20informaci%C3%B3n%20sobre%20GuauFresh." rel="noopener" target="_blank">WhatsApp · 321 852 2599</a><a class="btn btn-secondary" href="https://www.instagram.com/guau_fresh/" rel="noopener" target="_blank">Instagram · @guau_fresh</a><button class="btn btn-secondary" id="saveContact">Guardar contacto</button></div></div></section>
+</main>
+<footer class="site-footer">
+<div aria-hidden="true" class="footer-accent"></div>
+<div class="wrap footer-grid">
+<section aria-label="GuauFresh" class="footer-brand-block">
+<img alt="GuauFresh" class="footer-logo" src="assets/embedded-cc0342b7a1.png"/>
+<p>Espuma limpiadora para perros. Cuidado práctico entre baños, después del paseo y en esos momentos que necesitan un refresh.</p>
+<div class="footer-badges"><span>Baño en seco</span><span>Fórmula vegana</span><span>Sin parabenos ni sulfatos</span></div>
+</section>
+<nav aria-label="Enlaces de la landing" class="footer-column">
+<h3>Conoce GuauFresh</h3>
+<a href="#guaufresh">Nuestra propuesta</a>
+<a href="#producto">Producto y presentaciones</a>
+<a href="#uso">Cómo usar</a>
+<a href="#registro">Únete a la manada</a>
+</nav>
+<section class="footer-column">
+<h3>Compra y contacto</h3>
+<a href="https://wa.me/573218522599" rel="noopener" target="_blank">WhatsApp · 321 852 2599</a>
+<a href="https://www.instagram.com/guau_fresh/" rel="noopener" target="_blank">Instagram · @guau_fresh</a>
+<button aria-label="Pagar con QR" title="Pagar con QR" class="footer-payment" data-qr="" type="button">Pagar con QR Bancolombia</button>
+</section>
+<section class="footer-column footer-info">
+<h3>Información importante</h3>
+<p>Producto de uso externo. Evita el contacto con ojos, nariz, boca y heridas abiertas.</p>
+<p>El domicilio no está incluido en el precio. Confirma disponibilidad antes de realizar el pago.</p>
+</section>
+</div>
+<div class="wrap footer-bottom">
+<p>© 2026 GuauFresh. Cuidado que se siente, amor que se nota.</p>
+<div class="footer-bottom-actions">
+<button class="footer-privacy" id="footerPrivacy" type="button">Tratamiento de datos</button>
+</div>
+</div>
+</footer>
+<div class="mobile-bar"><a href="https://wa.me/573218522599" rel="noopener" target="_blank"><svg fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24"><path d="M20 11.5a8 8 0 0 1-11.8 7L4 20l1.5-4.1A8 8 0 1 1 20 11.5Z"></path></svg>WhatsApp</a><button aria-label="Pagar con QR" data-qr="" title="Pagar con QR"><svg fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24"><rect height="7" width="7" x="3" y="3"></rect><rect height="7" width="7" x="14" y="3"></rect><rect height="7" width="7" x="3" y="14"></rect><path d="M14 14h3v3h-3zM18 18h3v3h-3z"></path></svg>Pagar</button></div>
+<div aria-labelledby="qrTitle" aria-modal="true" class="modal" id="qrModal" role="dialog"><div class="modal-card payment-modal-card">
+<button aria-label="Cerrar" class="payment-modal-x" id="closeQrX" type="button">×</button>
+<span class="payment-kicker">Pago seguro</span>
+<h3 id="qrTitle">Paga tu GuauFresh con QR</h3>
+<p class="payment-intro">Escanea este código desde la aplicación de tu banco. La llave asociada es <strong>@marcelam8101</strong>.</p>
+<div class="payment-qr-frame"><img alt="Código QR de pago Bancolombia para GuauFresh" src="assets/embedded-6d6918d5ff.png"/></div>
+<div aria-label="Pasos para pagar" class="payment-steps">
+<span><b>1</b> Elige el valor de tu presentación.</span>
+<span><b>2</b> Escanea el QR y realiza el pago.</span>
+<span><b>3</b> Envía el comprobante por WhatsApp.</span>
+</div>
+<div class="payment-actions">
+<a class="btn btn-primary" href="https://wa.me/573218522599?text=Hola%2C%20acabo%20de%20realizar%20el%20pago%20de%20mi%20GuauFresh%20y%20quiero%20enviar%20el%20comprobante." rel="noopener" target="_blank">Enviar comprobante</a>
+<button class="btn payment-close" id="closeQr" type="button">Cerrar</button>
+</div>
+<small class="payment-note">Verifica el valor antes de confirmar. El domicilio no está incluido.</small>
+</div></div><div class="toast" id="toast"></div>
+<script>
+const $=(s,c=document)=>c.querySelector(s),$$=(s,c=document)=>[...c.querySelectorAll(s)];
+const progress=$('#progress'),header=$('#header');addEventListener('scroll',()=>{const h=document.documentElement;progress.style.width=`${h.scrollTop/(h.scrollHeight-h.clientHeight)*100}%`;header.classList.toggle('scrolled',scrollY>25)});
+const scenarios={parque:{badge:'PATAS Y PELAJE',title:'Regreso del parque',text:'Revisa las patas, retira hojas o tierra suelta y usa una pequeña cantidad de espuma en las zonas que realmente lo necesitan.',list:['Aplica poca espuma y aumenta solo si hace falta.','Masajea suavemente en círculos.','Retira con una toalla húmeda y limpia.']},lluvia:{badge:'HUMEDAD Y SUCIEDAD',title:'Después de la lluvia',text:'Antes de entrar, seca el exceso de humedad y concentra la espuma en patas y zona baja del pelaje.',list:['Evita aplicar sobre piel irritada.','No uses cerca de ojos, nariz o boca.','Deja el pelaje limpio y bien seco.']},carro:{badge:'VIAJES',title:'Antes de subir al carro',text:'Haz una revisión rápida de patas y pelaje para reducir tierra y suciedad en la tapicería.',list:['Lleva una toalla húmeda en el kit de paseo.','Mantén el envase vertical al dosificar.','Guarda el producto en un lugar fresco y seco.']},sofa:{badge:'ENTRE BAÑOS',title:'Antes del sofá',text:'Una limpieza puntual ayuda a que tu perro vuelva a su zona de descanso sin necesidad de un baño completo.',list:['Limpia solo las zonas que lo necesitan.','Retira bien el exceso con la toalla.','Cepilla después si el tipo de pelaje lo permite.']}};
+$$('.scenario-tab').forEach(b=>b.onclick=()=>{$$('.scenario-tab').forEach(x=>x.classList.remove('active'));b.classList.add('active');const d=scenarios[b.dataset.scenario];$('#scenarioBadge').textContent=d.badge;$('#scenarioTitle').textContent=d.title;$('#scenarioText').textContent=d.text;$('#scenarioList').innerHTML=d.list.map(x=>`<li>${x}</li>`).join('')});
+$('#unlockCoupon').onclick=()=>{$('#coupon').classList.add('show');$('#unlockCoupon').style.display='none';showToast('Beneficio desbloqueado')};
+const modal=$('#qrModal');$$('[data-qr]').forEach(b=>b.onclick=()=>modal.classList.add('show'));$('#closeQr').onclick=()=>modal.classList.remove('show');modal.onclick=e=>{if(e.target===modal)modal.classList.remove('show')};
+function showToast(t){const x=$('#toast');x.textContent=t;x.classList.add('show');setTimeout(()=>x.classList.remove('show'),2500)}
+
+$('#saveContact').onclick=()=>{const v=`BEGIN:VCARD\nVERSION:3.0\nFN:GuauFresh\nORG:GuauFresh\nTEL;TYPE=CELL:+573218522599\nURL:https://www.instagram.com/guau_fresh/\nNOTE:Espuma limpiadora para perros.\nEND:VCARD`;const a=document.createElement('a');a.href=URL.createObjectURL(new Blob([v],{type:'text/vcard'}));a.download='GuauFresh.vcf';a.click();setTimeout(()=>URL.revokeObjectURL(a.href),1000)};
+const form=$('#passportForm'),photoInput=$('#petPhoto'),photoPosition=$('#petPhotoPosition');let uploaded='';
+function updatePassportPosition(){const y=Number(photoPosition.value);$('#passportPhoto').style.backgroundPosition=`50% ${y}%`}
+photoPosition.oninput=updatePassportPosition;updatePassportPosition();
+photoInput.onchange=e=>{const f=e.target.files[0];if(!f)return;const r=new FileReader();r.onload=ev=>{uploaded=ev.target.result;$('#passportPhoto').style.backgroundImage=`url('${uploaded}')`;updatePassportPosition()};r.readAsDataURL(f)};form.onsubmit=e=>{e.preventDefault();$('#passportName').textContent=$('#petName').value.trim()||'Mi salchicha';$('#passportTrait').textContent=$('#petTrait').value;showToast('Pasaporte actualizado')};
+async function loadPassportImage(src){const img=new Image();img.crossOrigin='anonymous';img.src=src;await img.decode();return img}
+function drawContained(ctx,img,x,y,w,h){const r=Math.min(w/img.width,h/img.height),dw=img.width*r,dh=img.height*r;ctx.drawImage(img,x+(w-dw)/2,y+(h-dh)/2,dw,dh)}
+async function passportBlob(){const w=1080,h=1350,photoH=820,canvas=document.createElement('canvas');canvas.width=w;canvas.height=h;const ctx=canvas.getContext('2d');ctx.fillStyle='#00A79F';ctx.fillRect(0,0,w,h);const [img,gfLogo,clubLogo]=await Promise.all([loadPassportImage(uploaded||'assets/embedded-50446eb6ba.webp'),loadPassportImage('assets/embedded-cc0342b7a1.png'),loadPassportImage('assets/logo-salchimanada-del-rio.webp')]);const r=Math.max(w/img.width,photoH/img.height),nw=img.width*r,nh=img.height*r,overflowY=Math.max(0,nh-photoH),focus=Number(photoPosition.value)/100;ctx.drawImage(img,(w-nw)/2,-overflowY*focus,nw,nh);const g=ctx.createLinearGradient(0,330,0,900);g.addColorStop(0,'rgba(16,43,41,0)');g.addColorStop(1,'rgba(16,43,41,.96)');ctx.fillStyle=g;ctx.fillRect(0,300,w,650);ctx.fillStyle='rgba(255,255,255,.95)';ctx.beginPath();ctx.roundRect(55,55,290,116,24);ctx.fill();drawContained(ctx,gfLogo,75,70,250,86);ctx.fillStyle='rgba(255,255,255,.95)';ctx.beginPath();ctx.roundRect(875,55,150,150,28);ctx.fill();drawContained(ctx,clubLogo,888,68,124,124);ctx.fillStyle='#00A79F';ctx.fillRect(0,820,w,530);ctx.fillStyle='rgba(255,255,255,.86)';ctx.font='700 25px Arial';ctx.fillText('GUAUFRESH × LA SALCHIMANADA DEL RÍO',70,905);ctx.fillStyle='#fff';ctx.font='900 84px Georgia';ctx.fillText($('#passportName').textContent,70,1000);ctx.fillStyle='#C3ED79';ctx.font='700 42px Arial';ctx.fillText($('#passportTrait').textContent,70,1068);ctx.fillStyle='rgba(255,255,255,.85)';ctx.font='30px Arial';ctx.fillText('Pasaporte oficial de la manada salchicha',70,1140);ctx.strokeStyle='#C3ED79';ctx.lineWidth=5;ctx.strokeRect(40,40,1000,1270);return await new Promise(res=>canvas.toBlob(res,'image/png'))}
+$('#downloadPassport').onclick=async()=>{const blob=await passportBlob(),a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download='pasaporte_salchicha_guaufresh.png';a.click();setTimeout(()=>URL.revokeObjectURL(a.href),1000)};$('#sharePassport').onclick=async()=>{const blob=await passportBlob(),file=new File([blob],'pasaporte_salchicha_guaufresh.png',{type:'image/png'});if(navigator.canShare&&navigator.canShare({files:[file]}))await navigator.share({files:[file],title:'Mi pasaporte salchicha'});else{$('#downloadPassport').click();showToast('Pasaporte descargado para compartir')}};
+</script>
+<div aria-hidden="true" aria-labelledby="gfPrivacyTitle" aria-modal="true" class="gf-modal" id="gfPrivacyModal" role="dialog">
+<div class="gf-modal-card gf-privacy-card"><button aria-label="Cerrar" class="gf-modal-close" data-close-modal="">×</button><div class="kicker">Tratamiento de datos</div><h2 id="gfPrivacyTitle">Información clara y control para el usuario.</h2><p>Los registros se envían al backend protegido de GuauFresh. Si la conexión se interrumpe durante el envío, el navegador puede conservar temporalmente el registro pendiente para intentar sincronizarlo nuevamente.</p><ul><li>Finalidad: atención comercial, información de producto, actividades de comunidad y eventos.</li><li>Datos mínimos: contacto, ciudad, mascota e intereses.</li><li>Derechos: consultar, corregir o solicitar eliminación de la información.</li><li>No se solicitan contraseñas, documentos de identidad ni datos de pago.</li></ul><button class="btn btn-primary" data-close-modal="">Entendido</button></div>
+</div><div aria-hidden="true" aria-labelledby="gfAdminTitle" aria-modal="true" class="gf-modal" id="gfAdminModal" role="dialog">
+<div class="gf-modal-card gf-admin-card">
+<button aria-label="Cerrar" class="gf-modal-close" data-close-modal="">×</button>
+<div class="gf-admin-head"><div><div class="kicker">Gestión local</div><h2 id="gfAdminTitle">Base de clientes GuauFresh</h2><p>Panel de demostración. En producción, el acceso debe protegerse desde el backend.</p></div><span class="gf-backend-pill" id="gfAdminBackendPill">Modo local</span></div>
+<div class="gf-admin-stats"><article><small>Total registros</small><strong id="gfStatTotal">0</strong></article><article><small>Registrados hoy</small><strong id="gfStatToday">0</strong></article><article><small>Pendientes de sincronizar</small><strong id="gfStatPending">0</strong></article><article><small>Interés de compra</small><strong id="gfStatPurchase">0</strong></article></div>
+<div class="gf-backend-config"><div><strong>Backend productivo</strong><small>Conexión protegida con la base de clientes de GuauFresh.</small></div><input id="gfEndpointInput" readonly type="url"/><button class="btn btn-primary" hidden id="gfSaveEndpoint">Guardar</button><button class="btn gf-back" id="gfSyncNow">Sincronizar pendientes</button></div>
+<div class="gf-admin-toolbar"><input id="gfLeadSearch" placeholder="Buscar por nombre, teléfono, mascota o ciudad" type="search"/><select id="gfLeadFilter"><option value="all">Todos los intereses</option><option value="compra">Compra</option><option value="promociones">Promociones</option><option value="cuidado">Cuidado</option><option value="distribucion">Distribución</option><option value="alianzas">Alianzas</option></select><button class="btn gf-back" id="gfExportCsv">CSV</button><button class="btn gf-back" id="gfExportJson">JSON</button></div>
+<div class="gf-table-wrap"><table class="gf-lead-table"><thead><tr><th>Cliente</th><th>Contacto</th><th>Mascota</th><th>Interés</th><th>Estado</th><th></th></tr></thead><tbody id="gfLeadTableBody"></tbody></table><div class="gf-empty" id="gfLeadEmpty">Todavía no hay registros.</div></div>
+<div class="gf-admin-foot"><button class="gf-danger" id="gfClearLeads">Eliminar datos locales</button><span>Consentimiento v1.0 · esquema de datos v1.0</span></div>
+</div>
+</div><div aria-live="polite" class="gf-toast" id="gfToast" role="status"></div><script>
+(() => {
+  'use strict';
+  const STORAGE_KEY='guaufresh_clients_v1';
+  const OUTBOX_KEY='guaufresh_outbox_v1';
+  const CONFIG_KEY='guaufresh_backend_v1';
+  const CONSENT_VERSION='1.0-2026-08-01';
+  const SCHEMA_VERSION='1.0';
+  const $=(s,c=document)=>c.querySelector(s);
+  const $$=(s,c=document)=>Array.from(c.querySelectorAll(s));
+  const form=$('#gfClientForm');
+  if(!form) return;
+
+  const gfMemoryStore={};
+  const gfStore={
+    getItem(key){try{return window.localStorage.getItem(key)}catch{return Object.prototype.hasOwnProperty.call(gfMemoryStore,key)?gfMemoryStore[key]:null}},
+    setItem(key,value){try{window.localStorage.setItem(key,value)}catch{gfMemoryStore[key]=String(value)}},
+    removeItem(key){try{window.localStorage.removeItem(key)}catch{delete gfMemoryStore[key]}}
+  };
+  const safeParse=(value,fallback)=>{try{return JSON.parse(value) ?? fallback}catch{return fallback}};
+  const getLeads=()=>safeParse(gfStore.getItem(STORAGE_KEY),[]);
+  const setLeads=(rows)=>gfStore.setItem(STORAGE_KEY,JSON.stringify(rows));
+  const getOutbox=()=>safeParse(gfStore.getItem(OUTBOX_KEY),[]);
+  const setOutbox=(rows)=>gfStore.setItem(OUTBOX_KEY,JSON.stringify(rows));
+  const API_ENDPOINT='https://hnhouomerovkukwpcwym.supabase.co/functions/v1/register-client';
+  const getConfig=()=>Object.assign({},safeParse(gfStore.getItem(CONFIG_KEY),{}),{endpoint:API_ENDPOINT,credentials:'omit'});
+  const setConfig=(cfg)=>gfStore.setItem(CONFIG_KEY,JSON.stringify(cfg));
+  const uid=()=>crypto.randomUUID?.() || ('gf-'+Date.now().toString(36)+'-'+Math.random().toString(36).slice(2,10));
+  const normalizePhone=v=>(v||'').replace(/\D/g,'').replace(/^57(?=3\d{9}$)/,'');
+  const normalizeEmail=v=>(v||'').trim().toLowerCase();
+  const escapeHtml=v=>String(v??'').replace(/[&<>'"]/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;',"'":'&#39;','"':'&quot;'}[m]));
+  const toast=(message,error=false)=>{const el=$('#gfToast');el.textContent=message;el.classList.toggle('error',error);el.classList.add('show');clearTimeout(el._t);el._t=setTimeout(()=>el.classList.remove('show'),3200)};
+  const params=new URLSearchParams(location.search);
+  const attribution=()=>({
+    event:params.get('evento')||'guaufresh',source:params.get('utm_source')||'landing',medium:params.get('utm_medium')||'qr',campaign:params.get('utm_campaign')||'comunidad-guaufresh',content:params.get('utm_content')||'',referrer:document.referrer||'',pageUrl:location.href,userAgent:navigator.userAgent
+  });
+  const formatDate=v=>new Intl.DateTimeFormat('es-CO',{dateStyle:'medium',timeStyle:'short'}).format(new Date(v));
+
+  function setStep(n){
+    $$('.gf-form-step').forEach((el,i)=>el.classList.toggle('active',i===n-1));
+    $$('.gf-step-dots i').forEach((el,i)=>el.classList.toggle('active',i<=n-1));
+    $('#gfStepTitle').textContent=n===1?'Datos de contacto':'Mascota e intereses';
+  }
+  function validateStep(step){
+    let ok=true;
+    $$(`.gf-form-step[data-step="${step}"] [required]`).forEach(el=>{
+      const valid=el.type==='checkbox'?el.checked:el.checkValidity();
+      el.classList.toggle('invalid',!valid); if(!valid) ok=false;
+    });
+    if(!ok) toast('Revisa los campos obligatorios.',true);
+    return ok;
+  }
+  $('#gfNextStep').addEventListener('click',()=>{if(validateStep(1)){setStep(2);$('#gfPetName').focus()}});
+  $('#gfPrevStep').addEventListener('click',()=>setStep(1));
+  form.addEventListener('input',e=>e.target.classList?.remove('invalid'));
+
+  function buildRecord(){
+    const now=new Date().toISOString();
+    const record={
+      id:uid(),schemaVersion:SCHEMA_VERSION,createdAt:now,updatedAt:now,lastInteractionAt:now,visits:1,syncStatus:'pending',
+      contact:{fullName:$('#gfFullName').value.trim(),phone:normalizePhone($('#gfPhone').value),email:normalizeEmail($('#gfEmail').value),city:$('#gfCity').value.trim(),neighborhood:$('#gfNeighborhood').value.trim()},
+      pet:{name:$('#gfPetName').value.trim(),species:$('#gfSpecies').value,breed:$('#gfBreed').value.trim(),size:$('#gfPetSize').value},
+      commercial:{presentation:$('#gfPresentation').value,interest:$('#gfInterest').value,club:$('#gfClub').value.trim(),status:'nuevo',coupon:params.get('codigo')||'SALCHIGUAU15'},
+      consent:{marketing:true,privacy:true,version:CONSENT_VERSION,acceptedAt:now},attribution:attribution()
+    };
+    return record;
+  }
+  function upsertLocal(record){
+    const rows=getLeads();
+    const p=record.contact.phone,e=record.contact.email;
+    const idx=rows.findIndex(r=>(p&&r.contact?.phone===p)||(e&&r.contact?.email===e));
+    if(idx>=0){
+      const old=rows[idx];
+      record.id=old.id;record.createdAt=old.createdAt;record.visits=(old.visits||1)+1;
+      rows[idx]=Object.assign({},old,record,{updatedAt:new Date().toISOString(),lastInteractionAt:new Date().toISOString()});
+    }else rows.unshift(record);
+    setLeads(rows);return record;
+  }
+  async function sendRecord(record){
+    const cfg=getConfig();
+    if(!cfg.endpoint) return {mode:'local',ok:false};
+    try{
+      const res=await fetch(cfg.endpoint,{method:'POST',headers:{'Content-Type':'application/json','X-GuauFresh-Source':'landing-feria'},credentials:cfg.credentials||'include',body:JSON.stringify(record)});
+      if(!res.ok) throw new Error('HTTP '+res.status);
+      const payload=await res.json().catch(()=>({}));
+      markSynced(record.id,payload.customerId||payload.id||'');
+      return {mode:'api',ok:true,payload};
+    }catch(err){
+      queueRecord(record);return {mode:'api',ok:false,error:err};
+    }
+  }
+  function markSynced(id,remoteId=''){
+    const rows=getLeads().map(r=>r.id===id?Object.assign({},r,{syncStatus:'synced',remoteId,updatedAt:new Date().toISOString()}):r);setLeads(rows);
+    setOutbox(getOutbox().filter(r=>r.id!==id));
+  }
+  function queueRecord(record){const q=getOutbox();if(!q.some(r=>r.id===record.id))q.push(record);setOutbox(q)}
+  async function syncOutbox(){
+    const cfg=getConfig();const queue=getOutbox();
+    if(!cfg.endpoint){toast('Primero configura el endpoint del backend.',true);return}
+    if(!queue.length){toast('No hay registros pendientes.');return}
+    let synced=0;
+    for(const record of [...queue]){const r=await sendRecord(record);if(r.ok)synced++}
+    toast(`${synced} registro(s) sincronizado(s).`);renderAdmin();updateBackendStatus();
+  }
+  function updateBackendStatus(){
+    const cfg=getConfig(),status=$('#gfBackendStatus'),pill=$('#gfAdminBackendPill');
+    if(cfg.endpoint){status.classList.add('online');status.querySelector('b').textContent='Backend configurado';status.querySelector('span').textContent='Los nuevos registros intentarán sincronizarse automáticamente.';pill?.classList.add('online');if(pill)pill.textContent='API configurada'}
+    else{status.classList.remove('online');status.querySelector('b').textContent='Configuración pendiente';status.querySelector('span').textContent='La conexión se administra desde el panel interno.';pill?.classList.remove('online');if(pill)pill.textContent='Modo local'}
+  }
+
+  form.addEventListener('submit',async e=>{
+    e.preventDefault();if($('#gfCompany').value) return;if(!validateStep(2)) return;
+    const submit=$('#gfSubmitLead');submit.disabled=true;submit.textContent='Guardando…';
+    let record=upsertLocal(buildRecord());queueRecord(record);
+    const result=await sendRecord(record);
+    form.style.display='none';$('#gfSuccess').classList.add('show');$('#gfLeadCode').textContent='ID '+record.id.slice(0,8).toUpperCase();
+    $('#gfSuccessMessage').textContent=result.ok?'Tus datos se guardaron y sincronizaron con GuauFresh.':'Tus datos quedaron guardados en este dispositivo y están listos para sincronizarse.';
+    const msg=encodeURIComponent(`Hola, soy ${record.contact.fullName}. Registré a ${record.pet.name} en la landing GuauFresh y quiero información sobre la presentación ${record.commercial.presentation}.`);
+    $('#gfSuccessWhatsapp').href='https://wa.me/573218522599?text='+msg;
+    submit.disabled=false;submit.textContent='Guardar registro';renderAdmin();updateBackendStatus();
+  });
+  $('#gfNewLead').addEventListener('click',()=>{form.reset();$('#gfCity').value='Medellín';$('#gfClub').value='';form.style.display='block';$('#gfSuccess').classList.remove('show');setStep(1)});
+
+  const openModal=id=>{const m=$(id);m.classList.add('show');m.setAttribute('aria-hidden','false');document.body.style.overflow='hidden'};
+  const closeModal=m=>{m.classList.remove('show');m.setAttribute('aria-hidden','true');document.body.style.overflow=''};
+  $('#gfOpenPrivacy').addEventListener('click',()=>openModal('#gfPrivacyModal'));
+  $$('[data-close-modal]').forEach(b=>b.addEventListener('click',()=>closeModal(b.closest('.gf-modal'))));
+  $$('.gf-modal').forEach(m=>m.addEventListener('click',e=>{if(e.target===m)closeModal(m)}));
+  document.addEventListener('keydown',e=>{if(e.key==='Escape')$$('.gf-modal.show').forEach(closeModal)});
+
+  function renderAdmin(){
+    const rows=getLeads(),q=($('#gfLeadSearch')?.value||'').toLowerCase(),filter=$('#gfLeadFilter')?.value||'all';
+    const filtered=rows.filter(r=>{const hay=[r.contact?.fullName,r.contact?.phone,r.contact?.email,r.contact?.city,r.pet?.name,r.pet?.breed].join(' ').toLowerCase();return(!q||hay.includes(q))&&(filter==='all'||r.commercial?.interest===filter)});
+    $('#gfStatTotal').textContent=rows.length;const today=new Date().toDateString();$('#gfStatToday').textContent=rows.filter(r=>new Date(r.createdAt).toDateString()===today).length;$('#gfStatPending').textContent=rows.filter(r=>r.syncStatus!=='synced').length;$('#gfStatPurchase').textContent=rows.filter(r=>r.commercial?.interest==='compra').length;
+    const body=$('#gfLeadTableBody');body.innerHTML=filtered.map(r=>`<tr><td><strong>${escapeHtml(r.contact?.fullName)}</strong><small>${escapeHtml(r.contact?.city)} · ${formatDate(r.createdAt)}</small></td><td><strong>${escapeHtml(r.contact?.phone)}</strong><small>${escapeHtml(r.contact?.email||'Sin correo')}</small></td><td><strong>${escapeHtml(r.pet?.name)}</strong><small>${escapeHtml(r.pet?.species)} · ${escapeHtml(r.pet?.breed||'Sin raza')}</small></td><td><strong>${escapeHtml(r.commercial?.interest)}</strong><small>${escapeHtml(r.commercial?.presentation)}</small></td><td><span class="gf-sync-state ${r.syncStatus==='synced'?'synced':''}">${r.syncStatus==='synced'?'Sincronizado':'Pendiente'}</span></td><td><button class="gf-row-delete" data-delete-id="${r.id}">Eliminar</button></td></tr>`).join('');
+    $('#gfLeadEmpty').classList.toggle('show',!filtered.length);body.closest('table').style.display=filtered.length?'table':'none';
+    $$('[data-delete-id]').forEach(b=>b.addEventListener('click',()=>{if(confirm('¿Eliminar este registro local?')){setLeads(getLeads().filter(r=>r.id!==b.dataset.deleteId));setOutbox(getOutbox().filter(r=>r.id!==b.dataset.deleteId));renderAdmin()}}));
+    updateBackendStatus();
+  }
+  $('#gfLeadSearch').addEventListener('input',renderAdmin);$('#gfLeadFilter').addEventListener('change',renderAdmin);
+  $('#gfSaveEndpoint').addEventListener('click',()=>{const endpoint=$('#gfEndpointInput').value.trim();if(endpoint&&!/^https?:\/\//i.test(endpoint)){toast('Usa una URL completa con https://',true);return}setConfig({endpoint,credentials:'include'});toast(endpoint?'Endpoint guardado.':'Se activó el modo local.');updateBackendStatus()});
+  $('#gfSyncNow').addEventListener('click',syncOutbox);
+  function csvSafe(v){let s=String(v??'').replace(/"/g,'""');if(/^[=+\-@]/.test(s))s="'"+s;return '"'+s+'"'}
+  function exportRows(type){const rows=getLeads();if(!rows.length){toast('No hay datos para exportar.',true);return}let blob,name;if(type==='json'){blob=new Blob([JSON.stringify(rows,null,2)],{type:'application/json'});name='guaufresh-clientes.json'}else{const headers=['id','fecha','nombre','telefono','email','ciudad','barrio','mascota','especie','raza','tamano','presentacion','interes','club','estado_sync'];const lines=[headers.join(',')].concat(rows.map(r=>[r.id,r.createdAt,r.contact?.fullName,r.contact?.phone,r.contact?.email,r.contact?.city,r.contact?.neighborhood,r.pet?.name,r.pet?.species,r.pet?.breed,r.pet?.size,r.commercial?.presentation,r.commercial?.interest,r.commercial?.club,r.syncStatus].map(csvSafe).join(',')));blob=new Blob(['\ufeff'+lines.join('\n')],{type:'text/csv;charset=utf-8'});name='guaufresh-clientes.csv'}const a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download=name;a.click();setTimeout(()=>URL.revokeObjectURL(a.href),1000)}
+  $('#gfExportCsv').addEventListener('click',()=>exportRows('csv'));$('#gfExportJson').addEventListener('click',()=>exportRows('json'));
+  $('#gfClearLeads').addEventListener('click',()=>{if(confirm('Esta acción borrará todos los registros guardados en este navegador.')){gfStore.removeItem(STORAGE_KEY);gfStore.removeItem(OUTBOX_KEY);renderAdmin();toast('Datos locales eliminados.')}});
+  window.addEventListener('online',()=>{if(getConfig().endpoint&&getOutbox().length)syncOutbox()});
+  updateBackendStatus();
+})();
+</script><script>
+document.addEventListener('DOMContentLoaded',()=>{
+  const payModal=document.getElementById('qrModal');
+  const closeX=document.getElementById('closeQrX');
+  if(closeX&&payModal) closeX.addEventListener('click',()=>payModal.classList.remove('show'));
+  const footerPrivacy=document.getElementById('footerPrivacy');
+  const existingPrivacy=document.getElementById('gfOpenPrivacy');
+  if(footerPrivacy&&existingPrivacy) footerPrivacy.addEventListener('click',()=>existingPrivacy.click());
+});
+</script>
+<script id="guaufresh-responsive-js">
+(() => {
+  const toggle=document.getElementById('gfMenuToggle');
+  const drawer=document.getElementById('gfMobileDrawer');
+  if(!toggle||!drawer) return;
+  const setOpen=(open)=>{
+    drawer.classList.toggle('open',open);
+    drawer.setAttribute('aria-hidden',String(!open));
+    toggle.setAttribute('aria-expanded',String(open));
+    toggle.setAttribute('aria-label',open?'Cerrar menú':'Abrir menú');
+    document.body.classList.toggle('gf-drawer-open',open);
+  };
+  toggle.addEventListener('click',()=>setOpen(!drawer.classList.contains('open')));
+  drawer.querySelectorAll('[data-close-drawer],a[href^="#"]').forEach(el=>el.addEventListener('click',()=>setOpen(false)));
+  document.addEventListener('keydown',e=>{if(e.key==='Escape')setOpen(false)});
+  const mq=matchMedia('(min-width:981px)');
+  const closeDesktop=()=>{if(mq.matches)setOpen(false)};
+  mq.addEventListener?.('change',closeDesktop);
+})();
+</script>
+
+<script id="guaufresh-mobilebar-js">
+(() => {
+  const bar=document.querySelector('.mobile-bar');
+  if(!bar) return;
+  const update=()=>{
+    const mobile=matchMedia('(max-width:900px)').matches;
+    const threshold=Math.max(420,innerHeight*.68);
+    document.body.classList.toggle('gf-mobile-bar-visible',mobile && scrollY>threshold);
+  };
+  addEventListener('scroll',update,{passive:true});
+  addEventListener('resize',update,{passive:true});
+  update();
+})();
+</script>
+</body></html>

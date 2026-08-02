@@ -418,6 +418,12 @@ body{background:#f6f5ee}
 .fact:hover,.step:hover,.price-card:hover{transform:translateY(-4px);border-color:rgba(0,167,159,.35);box-shadow:0 20px 48px rgba(15,80,75,.12)}
 .story-card,.scenario-image,.product-showcase,.tech-card,.event-card,.passport-form,.passport-preview{box-shadow:0 28px 70px rgba(15,80,75,.11)}
 .fact{min-height:178px;display:flex;flex-direction:column;justify-content:center}.step{min-height:240px}.ingredient{background:#fbfdfb}
+.scenario-shell{grid-template-columns:minmax(340px,.82fr) minmax(0,1.18fr);align-items:stretch;gap:clamp(22px,3vw,36px)}
+.scenario-image{margin:0;min-height:0;aspect-ratio:4/5;background:#dfeee5;border:1px solid rgba(0,167,159,.12)}
+.scenario-image img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 54%}
+.scenario-image .caption{z-index:2;margin:0;left:18px;right:18px;bottom:18px;padding:17px 18px;line-height:1.55;border:1px solid rgba(255,255,255,.16)}
+.scenario-panel{display:flex;flex-direction:column;justify-content:flex-start;padding:clamp(24px,3vw,34px)}
+.scenario-panel .result{min-height:0}
 
 /* Pasaporte premium de la manada */
 #pasaporte{overflow:hidden;background:#edf7f3}
@@ -444,8 +450,8 @@ body{background:#f6f5ee}
 .passport-meta div{display:grid;gap:2px}.passport-meta small{font-size:8px;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.62)}.passport-meta strong{font-size:12px;color:#fff}
 .passport-seal{position:absolute;z-index:4;right:34px;bottom:112px;width:74px;height:74px;display:grid;place-items:center;text-align:center;border-radius:50%;background:#f9f871;color:#163f3d;border:3px double #163f3d;font-size:8px;font-weight:950;line-height:1.15;letter-spacing:.08em;transform:rotate(-8deg);box-shadow:0 8px 20px rgba(0,0,0,.18)}
 .passport-actions{margin-top:14px}.passport-actions .btn{min-height:48px}
-@media(max-width:900px){.section-head{grid-template-columns:1fr}.passport-grid{grid-template-columns:1fr}.passport-form{max-width:680px}.passport-preview{width:min(100%,680px);justify-self:center}}
-@media(max-width:620px){.section-head>div:first-child{padding-left:16px}.passport-form{padding:22px}.passport-preview{padding:10px;border-radius:28px}.passport-card{min-height:520px;border-radius:22px}.passport-info{left:26px;right:26px;bottom:25px}.passport-meta{gap:5px}.passport-guaufresh{left:20px;top:20px}.passport-partner{right:20px;top:20px}.passport-edition{right:20px;top:88px}.passport-seal{right:25px;bottom:105px;width:62px;height:62px}.passport-trait{max-width:75%;font-size:13px}.section{padding:72px 0}}
+@media(max-width:900px){.section-head{grid-template-columns:1fr}.scenario-shell,.passport-grid{grid-template-columns:1fr}.scenario-image{width:100%;aspect-ratio:16/10;min-height:390px}.scenario-image img{object-position:50% 58%}.passport-form{max-width:680px}.passport-preview{width:min(100%,680px);justify-self:center}}
+@media(max-width:620px){.section-head>div:first-child{padding-left:16px}.scenario-shell{gap:16px}.scenario-image{min-height:330px;aspect-ratio:4/3;border-radius:24px}.scenario-image .caption{left:12px;right:12px;bottom:12px;padding:13px 14px;font-size:12px}.scenario-panel{padding:17px;border-radius:24px}.scenario-tabs{grid-template-columns:1fr}.scenario-tab{min-height:48px}.result{padding:19px}.passport-form{padding:22px}.passport-preview{padding:10px;border-radius:28px}.passport-card{min-height:520px;border-radius:22px}.passport-info{left:26px;right:26px;bottom:25px}.passport-meta{gap:5px}.passport-guaufresh{left:20px;top:20px}.passport-partner{right:20px;top:20px}.passport-edition{right:20px;top:88px}.passport-seal{right:25px;bottom:105px;width:62px;height:62px}.passport-trait{max-width:75%;font-size:13px}.section{padding:72px 0}}
 </style>
 </head>
 <body>
@@ -541,7 +547,7 @@ body{background:#f6f5ee}
 <div class="wrap">
 <div class="section-head"><div><div class="kicker">Momentos GuauFresh</div><h2 class="title">¿Cuándo puede ayudarte <em>GuauFresh?</em></h2><p class="intro">Selecciona una situación cotidiana y recibe una recomendación de uso concreta.</p></div></div>
 <div class="scenario-shell">
-<figure class="scenario-image"><img alt="Perro salchicha real descansando en el césped después del paseo" src="assets/embedded-60b87b429c.webp"/><figcaption class="caption">Una rutina breve después del paseo ayuda a revisar patas, retirar tierra superficial y regresar a casa con más comodidad.</figcaption></figure>
+<figure class="scenario-image"><img alt="Perro salchicha descansando en el césped después del paseo" decoding="async" loading="lazy" src="assets/momentos-parque-v2.webp"/><figcaption class="caption">Una rutina breve después del paseo ayuda a revisar patas, retirar tierra superficial y regresar a casa con más comodidad.</figcaption></figure>
 <div class="scenario-panel">
 <div class="scenario-tabs" role="tablist"><button class="scenario-tab active" data-scenario="parque">Después del parque</button><button class="scenario-tab" data-scenario="lluvia">Después de la lluvia</button><button class="scenario-tab" data-scenario="carro">Antes de subir al carro</button><button class="scenario-tab" data-scenario="sofa">Antes del sofá</button></div>
 <div aria-live="polite" class="result"><span class="badge" id="scenarioBadge">PATAS Y PELAJE</span><h3 id="scenarioTitle">Regreso del parque</h3><p id="scenarioText">Revisa las patas, retira hojas o tierra suelta y usa una pequeña cantidad de espuma en las zonas que realmente lo necesitan.</p><ul class="checklist" id="scenarioList"><li>Aplica poca espuma y aumenta solo si hace falta.</li><li>Masajea suavemente en círculos.</li><li>Retira con una toalla húmeda y limpia.</li></ul></div>

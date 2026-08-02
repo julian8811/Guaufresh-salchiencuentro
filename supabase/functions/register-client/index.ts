@@ -105,6 +105,7 @@ Deno.serve(async (req: Request) => {
 
   const fullName = text(record?.contact?.fullName, 120);
   const normalizedPhone = phone(record?.contact?.phone);
+  const normalizedMobilePhone = phone(record?.contact?.mobilePhone);
   const normalizedEmail = email(record?.contact?.email);
   const consentPrivacy = record?.consent?.privacy === true;
 
@@ -117,7 +118,9 @@ Deno.serve(async (req: Request) => {
     local_id: text(record?.id, 100) || crypto.randomUUID(),
     full_name: fullName,
     phone: normalizedPhone,
+    mobile_phone: normalizedMobilePhone || null,
     email: normalizedEmail,
+    social_media: text(record?.contact?.socialMedia, 240) || null,
     city: text(record?.contact?.city, 100) || null,
     neighborhood: text(record?.contact?.neighborhood, 120) || null,
     pet_name: text(record?.pet?.name, 100) || null,
